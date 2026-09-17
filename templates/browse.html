@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Все 214 ключей{% endblock %}
+{% block content %}
+<h1>Все 214 ключей Канси</h1>
+<form method="get" class="search-form">
+  <input type="text" name="q" value="{{ q or '' }}" placeholder="Поиск: иероглиф, пиньинь, перевод...">
+  <button type="submit" class="btn-secondary">Найти</button>
+</form>
+
+<p class="count">Найдено: {{ radicals|length }}</p>
+
+<div class="grid">
+  {% for r in radicals %}
+    <a class="grid-item" href="{{ url_for('radical_detail', radical_id=r.id) }}">
+      <span class="grid-glyph">{{ r.char }}</span>
+      <span class="grid-pinyin">{{ r.pinyin_marks or r.pinyin }}</span>
+      <span class="grid-ru">{{ r.ru }}</span>
+    </a>
+  {% else %}
+    <p>Ничего не найдено.</p>
+  {% endfor %}
+</div>
+
+{% if common_chars %}
+  <h2 class="section-title">Ещё частые иероглифы (не ключи)</h2>
+  <p class="hint">Эти иероглифы состоят из нескольких ключей — показаны отдельно от списка 214 ключей Канси.</p>
+  <div class="grid">
+    {% for c in common_chars %}
+      <a class="grid-item" href="{{ url_for('char_view', char=c.char) }}">
+        <span class="grid-glyph">{{ c.char }}</span>
+        <span class="grid-pinyin">{{ c.pinyin_marks or c.pinyin }}</span>
+        <span class="grid-ru">{{ c.ru }}</span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+# Render.com Blueprint - lets you deploy via "New +" -> "Blueprint" pointing
+# at this repo instead of configuring a Web Service by hand. See README.md
+# "Деплой на Render.com" for the full walkthrough (including the manual,
+# no-blueprint path).
+services:
+  - type: web
+    name: chinesekeys
+    runtime: docker
+    plan: free
+    healthCheckPath: /

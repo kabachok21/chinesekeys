@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.idea/
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+render.yaml

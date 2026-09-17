@@ -1,0 +1,3203 @@
+[
+  {
+    "id": 1,
+    "char": "一",
+    "variants": [],
+    "pinyin": "yi1",
+    "pinyin_marks": "yī",
+    "en": "one",
+    "ru": "один",
+    "strokes": 1,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "一个",
+        "pinyin": "yi2 ge4",
+        "pinyin_marks": "yí gè",
+        "ru": "один (штука)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "char": "丨",
+    "variants": [],
+    "pinyin": "gun3",
+    "pinyin_marks": "gǔn",
+    "en": "line",
+    "ru": "вертикальная черта",
+    "strokes": 1
+  },
+  {
+    "id": 3,
+    "char": "丶",
+    "variants": [],
+    "pinyin": "zhu3",
+    "pinyin_marks": "zhǔ",
+    "en": "dot",
+    "ru": "точка",
+    "strokes": 1
+  },
+  {
+    "id": 4,
+    "char": "丿",
+    "variants": [],
+    "pinyin": "pie3",
+    "pinyin_marks": "piě",
+    "en": "slash",
+    "ru": "откидная влево (черта)",
+    "strokes": 1
+  },
+  {
+    "id": 5,
+    "char": "乙",
+    "variants": [
+      "乚"
+    ],
+    "pinyin": "yi3",
+    "pinyin_marks": "yǐ",
+    "en": "second/bent",
+    "ru": "второй; изогнутая черта",
+    "strokes": 1
+  },
+  {
+    "id": 6,
+    "char": "亅",
+    "variants": [],
+    "pinyin": "jue2",
+    "pinyin_marks": "jué",
+    "en": "hook",
+    "ru": "крюк",
+    "strokes": 1
+  },
+  {
+    "id": 7,
+    "char": "二",
+    "variants": [],
+    "pinyin": "er4",
+    "pinyin_marks": "èr",
+    "en": "two",
+    "ru": "два",
+    "strokes": 2,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "第二",
+        "pinyin": "di4 er4",
+        "pinyin_marks": "dì èr",
+        "ru": "второй"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "char": "亠",
+    "variants": [],
+    "pinyin": "tou2",
+    "pinyin_marks": "tóu",
+    "en": "lid",
+    "ru": "крышка",
+    "strokes": 2
+  },
+  {
+    "id": 9,
+    "char": "人",
+    "variants": [
+      "亻"
+    ],
+    "pinyin": "ren2",
+    "pinyin_marks": "rén",
+    "en": "person",
+    "ru": "человек",
+    "strokes": 2,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "人",
+        "pinyin": "ren2",
+        "pinyin_marks": "rén",
+        "ru": "человек"
+      },
+      {
+        "word": "大人",
+        "pinyin": "da4 ren2",
+        "pinyin_marks": "dà rén",
+        "ru": "взрослый"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "char": "儿",
+    "variants": [],
+    "pinyin": "er2",
+    "pinyin_marks": "ér",
+    "en": "legs",
+    "ru": "ноги (человека)",
+    "strokes": 2
+  },
+  {
+    "id": 11,
+    "char": "入",
+    "variants": [],
+    "pinyin": "ru4",
+    "pinyin_marks": "rù",
+    "en": "enter",
+    "ru": "входить",
+    "strokes": 2
+  },
+  {
+    "id": 12,
+    "char": "八",
+    "variants": [],
+    "pinyin": "ba1",
+    "pinyin_marks": "bā",
+    "en": "eight",
+    "ru": "восемь",
+    "strokes": 2,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "八",
+        "pinyin": "ba1",
+        "pinyin_marks": "bā",
+        "ru": "восемь"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "char": "冂",
+    "variants": [],
+    "pinyin": "jiong1",
+    "pinyin_marks": "jiōng",
+    "en": "borders",
+    "ru": "ограда, граница",
+    "strokes": 2
+  },
+  {
+    "id": 14,
+    "char": "冖",
+    "variants": [],
+    "pinyin": "mi4",
+    "pinyin_marks": "mì",
+    "en": "cover",
+    "ru": "покров",
+    "strokes": 2
+  },
+  {
+    "id": 15,
+    "char": "冫",
+    "variants": [],
+    "pinyin": "bing1",
+    "pinyin_marks": "bīng",
+    "en": "ice",
+    "ru": "лёд",
+    "strokes": 2
+  },
+  {
+    "id": 16,
+    "char": "几",
+    "variants": [],
+    "pinyin": "ji1",
+    "pinyin_marks": "jī",
+    "en": "table",
+    "ru": "столик",
+    "strokes": 2
+  },
+  {
+    "id": 17,
+    "char": "凵",
+    "variants": [],
+    "pinyin": "kan3",
+    "pinyin_marks": "kǎn",
+    "en": "receptacle",
+    "ru": "вместилище",
+    "strokes": 2
+  },
+  {
+    "id": 18,
+    "char": "刀",
+    "variants": [
+      "刂"
+    ],
+    "pinyin": "dao1",
+    "pinyin_marks": "dāo",
+    "en": "knife",
+    "ru": "нож",
+    "strokes": 2,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "刀子",
+        "pinyin": "dao1 zi",
+        "pinyin_marks": "dāo zi",
+        "ru": "нож"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "char": "力",
+    "variants": [],
+    "pinyin": "li4",
+    "pinyin_marks": "lì",
+    "en": "power",
+    "ru": "сила",
+    "strokes": 2,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "力气",
+        "pinyin": "li4 qi5",
+        "pinyin_marks": "lì qi",
+        "ru": "сила"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "char": "勹",
+    "variants": [],
+    "pinyin": "bao1",
+    "pinyin_marks": "bāo",
+    "en": "wrap",
+    "ru": "обёртывать",
+    "strokes": 2
+  },
+  {
+    "id": 21,
+    "char": "匕",
+    "variants": [],
+    "pinyin": "bi3",
+    "pinyin_marks": "bǐ",
+    "en": "spoon",
+    "ru": "ложка",
+    "strokes": 2
+  },
+  {
+    "id": 22,
+    "char": "匚",
+    "variants": [],
+    "pinyin": "fang1",
+    "pinyin_marks": "fāng",
+    "en": "box",
+    "ru": "ящик",
+    "strokes": 2
+  },
+  {
+    "id": 23,
+    "char": "匸",
+    "variants": [],
+    "pinyin": "xi4",
+    "pinyin_marks": "xì",
+    "en": "hiding",
+    "ru": "скрывать",
+    "strokes": 2
+  },
+  {
+    "id": 24,
+    "char": "十",
+    "variants": [],
+    "pinyin": "shi2",
+    "pinyin_marks": "shí",
+    "en": "ten",
+    "ru": "десять",
+    "strokes": 2,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "十",
+        "pinyin": "shi2",
+        "pinyin_marks": "shí",
+        "ru": "десять"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "char": "卜",
+    "variants": [],
+    "pinyin": "bu3",
+    "pinyin_marks": "bǔ",
+    "en": "divination",
+    "ru": "гадание",
+    "strokes": 2
+  },
+  {
+    "id": 26,
+    "char": "卩",
+    "variants": [
+      "㔾"
+    ],
+    "pinyin": "jie2",
+    "pinyin_marks": "jié",
+    "en": "seal",
+    "ru": "печать",
+    "strokes": 2
+  },
+  {
+    "id": 27,
+    "char": "厂",
+    "variants": [],
+    "pinyin": "han4",
+    "pinyin_marks": "hàn",
+    "en": "cliff",
+    "ru": "обрыв, утёс",
+    "strokes": 2
+  },
+  {
+    "id": 28,
+    "char": "厶",
+    "variants": [],
+    "pinyin": "si1",
+    "pinyin_marks": "sī",
+    "en": "private",
+    "ru": "личное, частное",
+    "strokes": 2
+  },
+  {
+    "id": 29,
+    "char": "又",
+    "variants": [],
+    "pinyin": "you4",
+    "pinyin_marks": "yòu",
+    "en": "again",
+    "ru": "снова, ещё",
+    "strokes": 2
+  },
+  {
+    "id": 30,
+    "char": "口",
+    "variants": [],
+    "pinyin": "kou3",
+    "pinyin_marks": "kǒu",
+    "en": "mouth",
+    "ru": "рот",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "口",
+        "pinyin": "kou3",
+        "pinyin_marks": "kǒu",
+        "ru": "рот"
+      },
+      {
+        "word": "人口",
+        "pinyin": "ren2 kou3",
+        "pinyin_marks": "rén kǒu",
+        "ru": "население"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "char": "囗",
+    "variants": [],
+    "pinyin": "wei2",
+    "pinyin_marks": "wéi",
+    "en": "enclosure",
+    "ru": "ограда, окружение",
+    "strokes": 3
+  },
+  {
+    "id": 32,
+    "char": "土",
+    "variants": [],
+    "pinyin": "tu3",
+    "pinyin_marks": "tǔ",
+    "en": "earth",
+    "ru": "земля",
+    "strokes": 3,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "土地",
+        "pinyin": "tu3 di4",
+        "pinyin_marks": "tǔ dì",
+        "ru": "земля, почва"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "char": "士",
+    "variants": [],
+    "pinyin": "shi4",
+    "pinyin_marks": "shì",
+    "en": "scholar/warrior",
+    "ru": "воин, учёный муж",
+    "strokes": 3
+  },
+  {
+    "id": 34,
+    "char": "夂",
+    "variants": [],
+    "pinyin": "zhi3",
+    "pinyin_marks": "zhǐ",
+    "en": "go",
+    "ru": "идти медленно",
+    "strokes": 3
+  },
+  {
+    "id": 35,
+    "char": "夊",
+    "variants": [],
+    "pinyin": "sui1",
+    "pinyin_marks": "suī",
+    "en": "go slowly",
+    "ru": "идти с трудом",
+    "strokes": 3
+  },
+  {
+    "id": 36,
+    "char": "夕",
+    "variants": [],
+    "pinyin": "xi1",
+    "pinyin_marks": "xī",
+    "en": "evening",
+    "ru": "вечер",
+    "strokes": 3
+  },
+  {
+    "id": 37,
+    "char": "大",
+    "variants": [],
+    "pinyin": "da4",
+    "pinyin_marks": "dà",
+    "en": "big",
+    "ru": "большой",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "大",
+        "pinyin": "da4",
+        "pinyin_marks": "dà",
+        "ru": "большой"
+      },
+      {
+        "word": "大家",
+        "pinyin": "da4 jia1",
+        "pinyin_marks": "dà jiā",
+        "ru": "все"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "char": "女",
+    "variants": [],
+    "pinyin": "nv3",
+    "pinyin_marks": "nǚ",
+    "en": "woman",
+    "ru": "женщина",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "女人",
+        "pinyin": "nv3 ren2",
+        "pinyin_marks": "nǚ rén",
+        "ru": "женщина"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "char": "子",
+    "variants": [],
+    "pinyin": "zi3",
+    "pinyin_marks": "zǐ",
+    "en": "child",
+    "ru": "ребёнок",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "孩子",
+        "pinyin": "hai2 zi5",
+        "pinyin_marks": "hái zi",
+        "ru": "ребёнок"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "char": "宀",
+    "variants": [],
+    "pinyin": "mian2",
+    "pinyin_marks": "mián",
+    "en": "roof",
+    "ru": "крыша",
+    "strokes": 3
+  },
+  {
+    "id": 41,
+    "char": "寸",
+    "variants": [],
+    "pinyin": "cun4",
+    "pinyin_marks": "cùn",
+    "en": "inch",
+    "ru": "цунь (мера длины)",
+    "strokes": 3,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "寸",
+        "pinyin": "cun4",
+        "pinyin_marks": "cùn",
+        "ru": "цунь (мера длины)"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "char": "小",
+    "variants": [],
+    "pinyin": "xiao3",
+    "pinyin_marks": "xiǎo",
+    "en": "small",
+    "ru": "маленький",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "小",
+        "pinyin": "xiao3",
+        "pinyin_marks": "xiǎo",
+        "ru": "маленький"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "char": "尢",
+    "variants": [
+      "尣"
+    ],
+    "pinyin": "wang1",
+    "pinyin_marks": "wāng",
+    "en": "lame",
+    "ru": "хромой",
+    "strokes": 3
+  },
+  {
+    "id": 44,
+    "char": "尸",
+    "variants": [],
+    "pinyin": "shi1",
+    "pinyin_marks": "shī",
+    "en": "corpse",
+    "ru": "труп; тело",
+    "strokes": 3
+  },
+  {
+    "id": 45,
+    "char": "屮",
+    "variants": [],
+    "pinyin": "che4",
+    "pinyin_marks": "chè",
+    "en": "sprout",
+    "ru": "росток",
+    "strokes": 3
+  },
+  {
+    "id": 46,
+    "char": "山",
+    "variants": [],
+    "pinyin": "shan1",
+    "pinyin_marks": "shān",
+    "en": "mountain",
+    "ru": "гора",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "山",
+        "pinyin": "shan1",
+        "pinyin_marks": "shān",
+        "ru": "гора"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "char": "巛",
+    "variants": [
+      "川"
+    ],
+    "pinyin": "chuan1",
+    "pinyin_marks": "chuān",
+    "en": "river",
+    "ru": "река",
+    "strokes": 3
+  },
+  {
+    "id": 48,
+    "char": "工",
+    "variants": [],
+    "pinyin": "gong1",
+    "pinyin_marks": "gōng",
+    "en": "work",
+    "ru": "работа, труд",
+    "strokes": 3,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "工作",
+        "pinyin": "gong1 zuo4",
+        "pinyin_marks": "gōng zuò",
+        "ru": "работа"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "char": "己",
+    "variants": [],
+    "pinyin": "ji3",
+    "pinyin_marks": "jǐ",
+    "en": "self",
+    "ru": "себя, сам",
+    "strokes": 3
+  },
+  {
+    "id": 50,
+    "char": "巾",
+    "variants": [],
+    "pinyin": "jin1",
+    "pinyin_marks": "jīn",
+    "en": "cloth",
+    "ru": "платок, ткань",
+    "strokes": 3,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "毛巾",
+        "pinyin": "mao2 jin1",
+        "pinyin_marks": "máo jīn",
+        "ru": "полотенце"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "char": "干",
+    "variants": [],
+    "pinyin": "gan1",
+    "pinyin_marks": "gān",
+    "en": "dry/shield",
+    "ru": "щит; сухой",
+    "strokes": 3
+  },
+  {
+    "id": 52,
+    "char": "幺",
+    "variants": [],
+    "pinyin": "yao1",
+    "pinyin_marks": "yāo",
+    "en": "short thread",
+    "ru": "маленький, тонкая нить",
+    "strokes": 3
+  },
+  {
+    "id": 53,
+    "char": "广",
+    "variants": [],
+    "pinyin": "guang3",
+    "pinyin_marks": "guǎng",
+    "en": "shelter",
+    "ru": "навес, укрытие",
+    "strokes": 3,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "广场",
+        "pinyin": "guang3 chang3",
+        "pinyin_marks": "guǎng chǎng",
+        "ru": "площадь"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "char": "廴",
+    "variants": [],
+    "pinyin": "yin3",
+    "pinyin_marks": "yǐn",
+    "en": "stride",
+    "ru": "шаг, движение",
+    "strokes": 3
+  },
+  {
+    "id": 55,
+    "char": "廾",
+    "variants": [],
+    "pinyin": "gong3",
+    "pinyin_marks": "gǒng",
+    "en": "hands joined",
+    "ru": "сложенные руки",
+    "strokes": 3
+  },
+  {
+    "id": 56,
+    "char": "弋",
+    "variants": [],
+    "pinyin": "yi4",
+    "pinyin_marks": "yì",
+    "en": "shoot",
+    "ru": "стрела на привязи",
+    "strokes": 3
+  },
+  {
+    "id": 57,
+    "char": "弓",
+    "variants": [],
+    "pinyin": "gong1",
+    "pinyin_marks": "gōng",
+    "en": "bow",
+    "ru": "лук (оружие)",
+    "strokes": 3,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "弓",
+        "pinyin": "gong1",
+        "pinyin_marks": "gōng",
+        "ru": "лук (оружие)"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "char": "彐",
+    "variants": [
+      "彑"
+    ],
+    "pinyin": "ji4",
+    "pinyin_marks": "jì",
+    "en": "snout",
+    "ru": "свиное рыло",
+    "strokes": 3
+  },
+  {
+    "id": 59,
+    "char": "彡",
+    "variants": [],
+    "pinyin": "shan1",
+    "pinyin_marks": "shān",
+    "en": "bristle",
+    "ru": "щетина, узор из линий",
+    "strokes": 3
+  },
+  {
+    "id": 60,
+    "char": "彳",
+    "variants": [],
+    "pinyin": "chi4",
+    "pinyin_marks": "chì",
+    "en": "step",
+    "ru": "шаг левой ногой",
+    "strokes": 3
+  },
+  {
+    "id": 61,
+    "char": "心",
+    "variants": [
+      "忄",
+      "㣺"
+    ],
+    "pinyin": "xin1",
+    "pinyin_marks": "xīn",
+    "en": "heart",
+    "ru": "сердце",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "心",
+        "pinyin": "xin1",
+        "pinyin_marks": "xīn",
+        "ru": "сердце"
+      },
+      {
+        "word": "开心",
+        "pinyin": "kai1 xin1",
+        "pinyin_marks": "kāi xīn",
+        "ru": "радостный"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "char": "戈",
+    "variants": [],
+    "pinyin": "ge1",
+    "pinyin_marks": "gē",
+    "en": "spear",
+    "ru": "копьё, секира",
+    "strokes": 4
+  },
+  {
+    "id": 63,
+    "char": "户",
+    "variants": [
+      "戶"
+    ],
+    "pinyin": "hu4",
+    "pinyin_marks": "hù",
+    "en": "door",
+    "ru": "дверь, двор",
+    "strokes": 4,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "户口",
+        "pinyin": "hu4 kou3",
+        "pinyin_marks": "hù kǒu",
+        "ru": "прописка"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "char": "手",
+    "variants": [
+      "扌"
+    ],
+    "pinyin": "shou3",
+    "pinyin_marks": "shǒu",
+    "en": "hand",
+    "ru": "рука",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "手",
+        "pinyin": "shou3",
+        "pinyin_marks": "shǒu",
+        "ru": "рука"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "char": "支",
+    "variants": [],
+    "pinyin": "zhi1",
+    "pinyin_marks": "zhī",
+    "en": "branch",
+    "ru": "ветвь, ответвление",
+    "strokes": 4
+  },
+  {
+    "id": 66,
+    "char": "攴",
+    "variants": [
+      "攵"
+    ],
+    "pinyin": "pu1",
+    "pinyin_marks": "pū",
+    "en": "rap",
+    "ru": "лёгкий удар",
+    "strokes": 4
+  },
+  {
+    "id": 67,
+    "char": "文",
+    "variants": [],
+    "pinyin": "wen2",
+    "pinyin_marks": "wén",
+    "en": "script",
+    "ru": "письмена, культура",
+    "strokes": 4,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "文化",
+        "pinyin": "wen2 hua4",
+        "pinyin_marks": "wén huà",
+        "ru": "культура"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "char": "斗",
+    "variants": [],
+    "pinyin": "dou3",
+    "pinyin_marks": "dǒu",
+    "en": "dipper",
+    "ru": "ковш, мера объёма",
+    "strokes": 4
+  },
+  {
+    "id": 69,
+    "char": "斤",
+    "variants": [],
+    "pinyin": "jin1",
+    "pinyin_marks": "jīn",
+    "en": "axe",
+    "ru": "топор",
+    "strokes": 4,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "斤",
+        "pinyin": "jin1",
+        "pinyin_marks": "jīn",
+        "ru": "цзинь (мера веса)"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "char": "方",
+    "variants": [],
+    "pinyin": "fang1",
+    "pinyin_marks": "fāng",
+    "en": "square",
+    "ru": "квадрат; сторона",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "地方",
+        "pinyin": "di4 fang5",
+        "pinyin_marks": "dì fang",
+        "ru": "место"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "char": "无",
+    "variants": [
+      "旡"
+    ],
+    "pinyin": "wu2",
+    "pinyin_marks": "wú",
+    "en": "not",
+    "ru": "не, нет",
+    "strokes": 4
+  },
+  {
+    "id": 72,
+    "char": "日",
+    "variants": [],
+    "pinyin": "ri4",
+    "pinyin_marks": "rì",
+    "en": "sun",
+    "ru": "солнце, день",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "日",
+        "pinyin": "ri4",
+        "pinyin_marks": "rì",
+        "ru": "день, солнце"
+      },
+      {
+        "word": "生日",
+        "pinyin": "sheng1 ri4",
+        "pinyin_marks": "shēng rì",
+        "ru": "день рождения"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "char": "曰",
+    "variants": [],
+    "pinyin": "yue1",
+    "pinyin_marks": "yuē",
+    "en": "say",
+    "ru": "говорить",
+    "strokes": 4
+  },
+  {
+    "id": 74,
+    "char": "月",
+    "variants": [],
+    "pinyin": "yue4",
+    "pinyin_marks": "yuè",
+    "en": "moon",
+    "ru": "луна, месяц",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "月",
+        "pinyin": "yue4",
+        "pinyin_marks": "yuè",
+        "ru": "месяц, луна"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "char": "木",
+    "variants": [],
+    "pinyin": "mu4",
+    "pinyin_marks": "mù",
+    "en": "tree",
+    "ru": "дерево",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "木头",
+        "pinyin": "mu4 tou5",
+        "pinyin_marks": "mù tou",
+        "ru": "дерево (материал)"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "char": "欠",
+    "variants": [],
+    "pinyin": "qian4",
+    "pinyin_marks": "qiàn",
+    "en": "lack",
+    "ru": "недостаток; зевать",
+    "strokes": 4
+  },
+  {
+    "id": 77,
+    "char": "止",
+    "variants": [],
+    "pinyin": "zhi3",
+    "pinyin_marks": "zhǐ",
+    "en": "stop",
+    "ru": "останавливаться",
+    "strokes": 4,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "停止",
+        "pinyin": "ting2 zhi3",
+        "pinyin_marks": "tíng zhǐ",
+        "ru": "останавливаться"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "char": "歹",
+    "variants": [],
+    "pinyin": "dai3",
+    "pinyin_marks": "dǎi",
+    "en": "death",
+    "ru": "смерть, зло",
+    "strokes": 4
+  },
+  {
+    "id": 79,
+    "char": "殳",
+    "variants": [],
+    "pinyin": "shu1",
+    "pinyin_marks": "shū",
+    "en": "weapon",
+    "ru": "пика, оружие",
+    "strokes": 4
+  },
+  {
+    "id": 80,
+    "char": "毋",
+    "variants": [],
+    "pinyin": "wu2",
+    "pinyin_marks": "wú",
+    "en": "don't",
+    "ru": "не, нельзя (запрет)",
+    "strokes": 4
+  },
+  {
+    "id": 81,
+    "char": "比",
+    "variants": [],
+    "pinyin": "bi3",
+    "pinyin_marks": "bǐ",
+    "en": "compare",
+    "ru": "сравнивать",
+    "strokes": 4,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "比较",
+        "pinyin": "bi3 jiao4",
+        "pinyin_marks": "bǐ jiào",
+        "ru": "сравнивать"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "char": "毛",
+    "variants": [],
+    "pinyin": "mao2",
+    "pinyin_marks": "máo",
+    "en": "fur",
+    "ru": "шерсть, волос",
+    "strokes": 4,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "毛",
+        "pinyin": "mao2",
+        "pinyin_marks": "máo",
+        "ru": "шерсть"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "char": "氏",
+    "variants": [],
+    "pinyin": "shi4",
+    "pinyin_marks": "shì",
+    "en": "clan",
+    "ru": "клан, род, фамилия",
+    "strokes": 4
+  },
+  {
+    "id": 84,
+    "char": "气",
+    "variants": [
+      "氣"
+    ],
+    "pinyin": "qi4",
+    "pinyin_marks": "qì",
+    "en": "steam",
+    "ru": "пар, воздух, ци",
+    "strokes": 4,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "天气",
+        "pinyin": "tian1 qi4",
+        "pinyin_marks": "tiān qì",
+        "ru": "погода"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "char": "水",
+    "variants": [
+      "氵",
+      "氺"
+    ],
+    "pinyin": "shui3",
+    "pinyin_marks": "shuǐ",
+    "en": "water",
+    "ru": "вода",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "水",
+        "pinyin": "shui3",
+        "pinyin_marks": "shuǐ",
+        "ru": "вода"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "char": "火",
+    "variants": [
+      "灬"
+    ],
+    "pinyin": "huo3",
+    "pinyin_marks": "huǒ",
+    "en": "fire",
+    "ru": "огонь",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "火",
+        "pinyin": "huo3",
+        "pinyin_marks": "huǒ",
+        "ru": "огонь"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "char": "爪",
+    "variants": [
+      "爫"
+    ],
+    "pinyin": "zhao3",
+    "pinyin_marks": "zhǎo",
+    "en": "claw",
+    "ru": "коготь",
+    "strokes": 4
+  },
+  {
+    "id": 88,
+    "char": "父",
+    "variants": [],
+    "pinyin": "fu4",
+    "pinyin_marks": "fù",
+    "en": "father",
+    "ru": "отец",
+    "strokes": 4
+  },
+  {
+    "id": 89,
+    "char": "爻",
+    "variants": [],
+    "pinyin": "yao2",
+    "pinyin_marks": "yáo",
+    "en": "trigrams",
+    "ru": "триграммы (ицзин)",
+    "strokes": 4
+  },
+  {
+    "id": 90,
+    "char": "爿",
+    "variants": [],
+    "pinyin": "qiang2",
+    "pinyin_marks": "qiáng",
+    "en": "half tree trunk",
+    "ru": "половина расколотого ствола",
+    "strokes": 4
+  },
+  {
+    "id": 91,
+    "char": "片",
+    "variants": [],
+    "pinyin": "pian4",
+    "pinyin_marks": "piàn",
+    "en": "slice",
+    "ru": "ломоть, дощечка",
+    "strokes": 4
+  },
+  {
+    "id": 92,
+    "char": "牙",
+    "variants": [],
+    "pinyin": "ya2",
+    "pinyin_marks": "yá",
+    "en": "fang",
+    "ru": "клык, зуб",
+    "strokes": 4
+  },
+  {
+    "id": 93,
+    "char": "牛",
+    "variants": [
+      "牜"
+    ],
+    "pinyin": "niu2",
+    "pinyin_marks": "niú",
+    "en": "cow",
+    "ru": "корова, бык",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "牛奶",
+        "pinyin": "niu2 nai3",
+        "pinyin_marks": "niú nǎi",
+        "ru": "молоко"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "char": "犬",
+    "variants": [
+      "犭"
+    ],
+    "pinyin": "quan3",
+    "pinyin_marks": "quǎn",
+    "en": "dog",
+    "ru": "собака",
+    "strokes": 4,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "狗",
+        "pinyin": "gou3",
+        "pinyin_marks": "gǒu",
+        "ru": "собака"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "char": "玄",
+    "variants": [],
+    "pinyin": "xuan2",
+    "pinyin_marks": "xuán",
+    "en": "profound",
+    "ru": "тёмный, таинственный",
+    "strokes": 5
+  },
+  {
+    "id": 96,
+    "char": "玉",
+    "variants": [
+      "王",
+      "玊"
+    ],
+    "pinyin": "yu4",
+    "pinyin_marks": "yù",
+    "en": "jade",
+    "ru": "нефрит, яшма",
+    "strokes": 5,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "玉",
+        "pinyin": "yu4",
+        "pinyin_marks": "yù",
+        "ru": "нефрит"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "char": "瓜",
+    "variants": [],
+    "pinyin": "gua1",
+    "pinyin_marks": "guā",
+    "en": "melon",
+    "ru": "тыква, дыня",
+    "strokes": 5
+  },
+  {
+    "id": 98,
+    "char": "瓦",
+    "variants": [],
+    "pinyin": "wa3",
+    "pinyin_marks": "wǎ",
+    "en": "tile",
+    "ru": "черепица",
+    "strokes": 5
+  },
+  {
+    "id": 99,
+    "char": "甘",
+    "variants": [],
+    "pinyin": "gan1",
+    "pinyin_marks": "gān",
+    "en": "sweet",
+    "ru": "сладкий",
+    "strokes": 5
+  },
+  {
+    "id": 100,
+    "char": "生",
+    "variants": [],
+    "pinyin": "sheng1",
+    "pinyin_marks": "shēng",
+    "en": "life",
+    "ru": "жизнь, рождаться",
+    "strokes": 5,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "学生",
+        "pinyin": "xue2 sheng1",
+        "pinyin_marks": "xué shēng",
+        "ru": "студент"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "char": "用",
+    "variants": [],
+    "pinyin": "yong4",
+    "pinyin_marks": "yòng",
+    "en": "use",
+    "ru": "использовать",
+    "strokes": 5,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "用",
+        "pinyin": "yong4",
+        "pinyin_marks": "yòng",
+        "ru": "использовать"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "char": "田",
+    "variants": [],
+    "pinyin": "tian2",
+    "pinyin_marks": "tián",
+    "en": "field",
+    "ru": "поле",
+    "strokes": 5,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "田",
+        "pinyin": "tian2",
+        "pinyin_marks": "tián",
+        "ru": "поле"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "char": "疋",
+    "variants": [],
+    "pinyin": "pi3",
+    "pinyin_marks": "pǐ",
+    "en": "bolt of cloth",
+    "ru": "штука ткани",
+    "strokes": 5
+  },
+  {
+    "id": 104,
+    "char": "疒",
+    "variants": [],
+    "pinyin": "ne4",
+    "pinyin_marks": "nè",
+    "en": "sickness",
+    "ru": "болезнь",
+    "strokes": 5
+  },
+  {
+    "id": 105,
+    "char": "癶",
+    "variants": [],
+    "pinyin": "bo1",
+    "pinyin_marks": "bō",
+    "en": "footsteps",
+    "ru": "шаги (в стороны)",
+    "strokes": 5
+  },
+  {
+    "id": 106,
+    "char": "白",
+    "variants": [],
+    "pinyin": "bai2",
+    "pinyin_marks": "bái",
+    "en": "white",
+    "ru": "белый",
+    "strokes": 5,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "白色",
+        "pinyin": "bai2 se4",
+        "pinyin_marks": "bái sè",
+        "ru": "белый цвет"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "char": "皮",
+    "variants": [],
+    "pinyin": "pi2",
+    "pinyin_marks": "pí",
+    "en": "skin",
+    "ru": "кожа",
+    "strokes": 5
+  },
+  {
+    "id": 108,
+    "char": "皿",
+    "variants": [],
+    "pinyin": "min3",
+    "pinyin_marks": "mǐn",
+    "en": "dish",
+    "ru": "сосуд, блюдо",
+    "strokes": 5,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "盘子",
+        "pinyin": "pan2 zi5",
+        "pinyin_marks": "pán zi",
+        "ru": "тарелка"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "char": "目",
+    "variants": [],
+    "pinyin": "mu4",
+    "pinyin_marks": "mù",
+    "en": "eye",
+    "ru": "глаз",
+    "strokes": 5,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "眼睛",
+        "pinyin": "yan3 jing5",
+        "pinyin_marks": "yǎn jing",
+        "ru": "глаза"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "char": "矛",
+    "variants": [],
+    "pinyin": "mao2",
+    "pinyin_marks": "máo",
+    "en": "spear",
+    "ru": "копьё",
+    "strokes": 5
+  },
+  {
+    "id": 111,
+    "char": "矢",
+    "variants": [],
+    "pinyin": "shi3",
+    "pinyin_marks": "shǐ",
+    "en": "arrow",
+    "ru": "стрела",
+    "strokes": 5
+  },
+  {
+    "id": 112,
+    "char": "石",
+    "variants": [],
+    "pinyin": "shi2",
+    "pinyin_marks": "shí",
+    "en": "stone",
+    "ru": "камень",
+    "strokes": 5,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "石头",
+        "pinyin": "shi2 tou5",
+        "pinyin_marks": "shí tou",
+        "ru": "камень"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "char": "示",
+    "variants": [
+      "礻"
+    ],
+    "pinyin": "shi4",
+    "pinyin_marks": "shì",
+    "en": "spirit",
+    "ru": "дух, знак, алтарь",
+    "strokes": 5
+  },
+  {
+    "id": 114,
+    "char": "禸",
+    "variants": [],
+    "pinyin": "rou2",
+    "pinyin_marks": "róu",
+    "en": "track",
+    "ru": "след (зверя)",
+    "strokes": 5
+  },
+  {
+    "id": 115,
+    "char": "禾",
+    "variants": [],
+    "pinyin": "he2",
+    "pinyin_marks": "hé",
+    "en": "grain",
+    "ru": "хлебный злак",
+    "strokes": 5,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "禾苗",
+        "pinyin": "he2 miao2",
+        "pinyin_marks": "hé miáo",
+        "ru": "всходы"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "char": "穴",
+    "variants": [],
+    "pinyin": "xue4",
+    "pinyin_marks": "xuè",
+    "en": "cave",
+    "ru": "пещера, нора",
+    "strokes": 5
+  },
+  {
+    "id": 117,
+    "char": "立",
+    "variants": [],
+    "pinyin": "li4",
+    "pinyin_marks": "lì",
+    "en": "stand",
+    "ru": "стоять",
+    "strokes": 5,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "立刻",
+        "pinyin": "li4 ke4",
+        "pinyin_marks": "lì kè",
+        "ru": "немедленно"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "char": "竹",
+    "variants": [
+      "⺮"
+    ],
+    "pinyin": "zhu2",
+    "pinyin_marks": "zhú",
+    "en": "bamboo",
+    "ru": "бамбук",
+    "strokes": 6,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "竹子",
+        "pinyin": "zhu2 zi5",
+        "pinyin_marks": "zhú zi",
+        "ru": "бамбук"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "char": "米",
+    "variants": [],
+    "pinyin": "mi3",
+    "pinyin_marks": "mǐ",
+    "en": "rice",
+    "ru": "рис",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "米饭",
+        "pinyin": "mi3 fan4",
+        "pinyin_marks": "mǐ fàn",
+        "ru": "варёный рис"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "char": "糸",
+    "variants": [
+      "纟",
+      "糹"
+    ],
+    "pinyin": "mi4",
+    "pinyin_marks": "mì",
+    "en": "silk",
+    "ru": "шёлк, нить",
+    "strokes": 6,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "丝绸",
+        "pinyin": "si1 chou2",
+        "pinyin_marks": "sī chóu",
+        "ru": "шёлк"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "char": "缶",
+    "variants": [],
+    "pinyin": "fou3",
+    "pinyin_marks": "fǒu",
+    "en": "jar",
+    "ru": "кувшин, сосуд",
+    "strokes": 6
+  },
+  {
+    "id": 122,
+    "char": "网",
+    "variants": [
+      "罒",
+      "罓",
+      "網"
+    ],
+    "pinyin": "wang3",
+    "pinyin_marks": "wǎng",
+    "en": "net",
+    "ru": "сеть",
+    "strokes": 6
+  },
+  {
+    "id": 123,
+    "char": "羊",
+    "variants": [
+      "⺶",
+      "⺷"
+    ],
+    "pinyin": "yang2",
+    "pinyin_marks": "yáng",
+    "en": "sheep",
+    "ru": "овца, баран",
+    "strokes": 6,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "羊",
+        "pinyin": "yang2",
+        "pinyin_marks": "yáng",
+        "ru": "овца"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "char": "羽",
+    "variants": [],
+    "pinyin": "yu3",
+    "pinyin_marks": "yǔ",
+    "en": "feather",
+    "ru": "перо",
+    "strokes": 6
+  },
+  {
+    "id": 125,
+    "char": "老",
+    "variants": [
+      "耂"
+    ],
+    "pinyin": "lao3",
+    "pinyin_marks": "lǎo",
+    "en": "old",
+    "ru": "старый",
+    "strokes": 6,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "老师",
+        "pinyin": "lao3 shi1",
+        "pinyin_marks": "lǎo shī",
+        "ru": "учитель"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "char": "而",
+    "variants": [],
+    "pinyin": "er2",
+    "pinyin_marks": "ér",
+    "en": "and",
+    "ru": "и, но (союз)",
+    "strokes": 6
+  },
+  {
+    "id": 127,
+    "char": "耒",
+    "variants": [],
+    "pinyin": "lei3",
+    "pinyin_marks": "lěi",
+    "en": "plow",
+    "ru": "плуг, соха",
+    "strokes": 6
+  },
+  {
+    "id": 128,
+    "char": "耳",
+    "variants": [],
+    "pinyin": "er3",
+    "pinyin_marks": "ěr",
+    "en": "ear",
+    "ru": "ухо",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "耳朵",
+        "pinyin": "er3 duo5",
+        "pinyin_marks": "ěr duo",
+        "ru": "уши"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "char": "聿",
+    "variants": [],
+    "pinyin": "yu4",
+    "pinyin_marks": "yù",
+    "en": "brush",
+    "ru": "кисть для письма",
+    "strokes": 6
+  },
+  {
+    "id": 130,
+    "char": "肉",
+    "variants": [
+      "月"
+    ],
+    "pinyin": "rou4",
+    "pinyin_marks": "ròu",
+    "en": "meat",
+    "ru": "мясо",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "肉",
+        "pinyin": "rou4",
+        "pinyin_marks": "ròu",
+        "ru": "мясо"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "char": "臣",
+    "variants": [],
+    "pinyin": "chen2",
+    "pinyin_marks": "chén",
+    "en": "minister",
+    "ru": "министр, чиновник",
+    "strokes": 6
+  },
+  {
+    "id": 132,
+    "char": "自",
+    "variants": [],
+    "pinyin": "zi4",
+    "pinyin_marks": "zì",
+    "en": "self",
+    "ru": "сам, себя",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "自己",
+        "pinyin": "zi4 ji3",
+        "pinyin_marks": "zì jǐ",
+        "ru": "сам, себя"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "char": "至",
+    "variants": [],
+    "pinyin": "zhi4",
+    "pinyin_marks": "zhì",
+    "en": "arrive",
+    "ru": "достигать, доходить",
+    "strokes": 6
+  },
+  {
+    "id": 134,
+    "char": "臼",
+    "variants": [],
+    "pinyin": "jiu4",
+    "pinyin_marks": "jiù",
+    "en": "mortar",
+    "ru": "ступа",
+    "strokes": 6
+  },
+  {
+    "id": 135,
+    "char": "舌",
+    "variants": [],
+    "pinyin": "she2",
+    "pinyin_marks": "shé",
+    "en": "tongue",
+    "ru": "язык",
+    "strokes": 6
+  },
+  {
+    "id": 136,
+    "char": "舛",
+    "variants": [],
+    "pinyin": "chuan3",
+    "pinyin_marks": "chuǎn",
+    "en": "oppose",
+    "ru": "противоречить",
+    "strokes": 6
+  },
+  {
+    "id": 137,
+    "char": "舟",
+    "variants": [],
+    "pinyin": "zhou1",
+    "pinyin_marks": "zhōu",
+    "en": "boat",
+    "ru": "лодка, судно",
+    "strokes": 6,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "船",
+        "pinyin": "chuan2",
+        "pinyin_marks": "chuán",
+        "ru": "лодка"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "char": "艮",
+    "variants": [],
+    "pinyin": "gen4",
+    "pinyin_marks": "gèn",
+    "en": "stopping",
+    "ru": "предел (триграмма гэнь)",
+    "strokes": 6
+  },
+  {
+    "id": 139,
+    "char": "色",
+    "variants": [],
+    "pinyin": "se4",
+    "pinyin_marks": "sè",
+    "en": "color",
+    "ru": "цвет",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "颜色",
+        "pinyin": "yan2 se4",
+        "pinyin_marks": "yán sè",
+        "ru": "цвет"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "char": "艸",
+    "variants": [
+      "艹",
+      "䒑"
+    ],
+    "pinyin": "cao3",
+    "pinyin_marks": "cǎo",
+    "en": "grass",
+    "ru": "трава",
+    "strokes": 6,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "草",
+        "pinyin": "cao3",
+        "pinyin_marks": "cǎo",
+        "ru": "трава"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "char": "虍",
+    "variants": [],
+    "pinyin": "hu1",
+    "pinyin_marks": "hū",
+    "en": "tiger stripes",
+    "ru": "тигровый узор",
+    "strokes": 6
+  },
+  {
+    "id": 142,
+    "char": "虫",
+    "variants": [],
+    "pinyin": "chong2",
+    "pinyin_marks": "chóng",
+    "en": "insect",
+    "ru": "насекомое",
+    "strokes": 6,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "昆虫",
+        "pinyin": "kun1 chong2",
+        "pinyin_marks": "kūn chóng",
+        "ru": "насекомое"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "char": "血",
+    "variants": [],
+    "pinyin": "xue4",
+    "pinyin_marks": "xuè",
+    "en": "blood",
+    "ru": "кровь",
+    "strokes": 6,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "血",
+        "pinyin": "xue4",
+        "pinyin_marks": "xuè",
+        "ru": "кровь"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "char": "行",
+    "variants": [],
+    "pinyin": "xing2",
+    "pinyin_marks": "xíng",
+    "en": "walk",
+    "ru": "идти, двигаться",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "行",
+        "pinyin": "xing2",
+        "pinyin_marks": "xíng",
+        "ru": "идти, годится"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "char": "衣",
+    "variants": [
+      "衤"
+    ],
+    "pinyin": "yi1",
+    "pinyin_marks": "yī",
+    "en": "clothes",
+    "ru": "одежда",
+    "strokes": 6,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "衣服",
+        "pinyin": "yi1 fu5",
+        "pinyin_marks": "yī fu",
+        "ru": "одежда"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "char": "襾",
+    "variants": [
+      "西",
+      "覀"
+    ],
+    "pinyin": "ya4",
+    "pinyin_marks": "yà",
+    "en": "cover",
+    "ru": "покрывать; запад",
+    "strokes": 6
+  },
+  {
+    "id": 147,
+    "char": "見",
+    "variants": [
+      "见"
+    ],
+    "pinyin": "jian4",
+    "pinyin_marks": "jiàn",
+    "en": "see",
+    "ru": "видеть",
+    "strokes": 7,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "看见",
+        "pinyin": "kan4 jian4",
+        "pinyin_marks": "kàn jiàn",
+        "ru": "увидеть"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "char": "角",
+    "variants": [],
+    "pinyin": "jiao3",
+    "pinyin_marks": "jiǎo",
+    "en": "horn",
+    "ru": "рог, угол",
+    "strokes": 7,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "角度",
+        "pinyin": "jiao3 du4",
+        "pinyin_marks": "jiǎo dù",
+        "ru": "угол"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "char": "言",
+    "variants": [
+      "讠"
+    ],
+    "pinyin": "yan2",
+    "pinyin_marks": "yán",
+    "en": "speech",
+    "ru": "речь, слово",
+    "strokes": 7,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "语言",
+        "pinyin": "yu3 yan2",
+        "pinyin_marks": "yǔ yán",
+        "ru": "язык"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "char": "谷",
+    "variants": [],
+    "pinyin": "gu3",
+    "pinyin_marks": "gǔ",
+    "en": "valley",
+    "ru": "долина",
+    "strokes": 7
+  },
+  {
+    "id": 151,
+    "char": "豆",
+    "variants": [],
+    "pinyin": "dou4",
+    "pinyin_marks": "dòu",
+    "en": "bean",
+    "ru": "боб, горох",
+    "strokes": 7,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "豆腐",
+        "pinyin": "dou4 fu5",
+        "pinyin_marks": "dòu fu",
+        "ru": "тофу"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "char": "豕",
+    "variants": [],
+    "pinyin": "shi3",
+    "pinyin_marks": "shǐ",
+    "en": "pig",
+    "ru": "свинья",
+    "strokes": 7
+  },
+  {
+    "id": 153,
+    "char": "豸",
+    "variants": [],
+    "pinyin": "zhi4",
+    "pinyin_marks": "zhì",
+    "en": "badger",
+    "ru": "барсук; хищный зверь",
+    "strokes": 7
+  },
+  {
+    "id": 154,
+    "char": "貝",
+    "variants": [
+      "贝"
+    ],
+    "pinyin": "bei4",
+    "pinyin_marks": "bèi",
+    "en": "shell/money",
+    "ru": "раковина; деньги",
+    "strokes": 7,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "贝壳",
+        "pinyin": "bei4 ke2",
+        "pinyin_marks": "bèi ké",
+        "ru": "ракушка"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "char": "赤",
+    "variants": [],
+    "pinyin": "chi4",
+    "pinyin_marks": "chì",
+    "en": "red",
+    "ru": "красный",
+    "strokes": 7,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "红色",
+        "pinyin": "hong2 se4",
+        "pinyin_marks": "hóng sè",
+        "ru": "красный"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "char": "走",
+    "variants": [],
+    "pinyin": "zou3",
+    "pinyin_marks": "zǒu",
+    "en": "walk/run",
+    "ru": "идти, бежать",
+    "strokes": 7,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "走路",
+        "pinyin": "zou3 lu4",
+        "pinyin_marks": "zǒu lù",
+        "ru": "идти пешком"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "char": "足",
+    "variants": [
+      "⻊"
+    ],
+    "pinyin": "zu2",
+    "pinyin_marks": "zú",
+    "en": "foot",
+    "ru": "нога, стопа",
+    "strokes": 7,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "足球",
+        "pinyin": "zu2 qiu2",
+        "pinyin_marks": "zú qiú",
+        "ru": "футбол"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "char": "身",
+    "variants": [],
+    "pinyin": "shen1",
+    "pinyin_marks": "shēn",
+    "en": "body",
+    "ru": "тело",
+    "strokes": 7,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "身体",
+        "pinyin": "shen1 ti3",
+        "pinyin_marks": "shēn tǐ",
+        "ru": "тело"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "char": "車",
+    "variants": [
+      "车"
+    ],
+    "pinyin": "che1",
+    "pinyin_marks": "chē",
+    "en": "cart",
+    "ru": "повозка, машина",
+    "strokes": 7,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "车",
+        "pinyin": "che1",
+        "pinyin_marks": "chē",
+        "ru": "машина"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "char": "辛",
+    "variants": [],
+    "pinyin": "xin1",
+    "pinyin_marks": "xīn",
+    "en": "bitter",
+    "ru": "горький; острый",
+    "strokes": 7
+  },
+  {
+    "id": 161,
+    "char": "辰",
+    "variants": [],
+    "pinyin": "chen2",
+    "pinyin_marks": "chén",
+    "en": "morning/star",
+    "ru": "утро; созвездие",
+    "strokes": 7
+  },
+  {
+    "id": 162,
+    "char": "辵",
+    "variants": [
+      "⻌",
+      "⻍"
+    ],
+    "pinyin": "chuo4",
+    "pinyin_marks": "chuò",
+    "en": "walk",
+    "ru": "ходьба, движение",
+    "strokes": 7
+  },
+  {
+    "id": 163,
+    "char": "邑",
+    "variants": [],
+    "pinyin": "yi4",
+    "pinyin_marks": "yì",
+    "en": "city",
+    "ru": "город, поселение (справа в иероглифе: 阝)",
+    "strokes": 7
+  },
+  {
+    "id": 164,
+    "char": "酉",
+    "variants": [],
+    "pinyin": "you3",
+    "pinyin_marks": "yǒu",
+    "en": "wine",
+    "ru": "вино, спиртное",
+    "strokes": 7,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "酉",
+        "pinyin": "you3",
+        "pinyin_marks": "yǒu",
+        "ru": "10-й циклический знак"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "char": "釆",
+    "variants": [],
+    "pinyin": "bian4",
+    "pinyin_marks": "biàn",
+    "en": "distinguish",
+    "ru": "различать",
+    "strokes": 7
+  },
+  {
+    "id": 166,
+    "char": "里",
+    "variants": [],
+    "pinyin": "li3",
+    "pinyin_marks": "lǐ",
+    "en": "village",
+    "ru": "деревня; ли (мера длины)",
+    "strokes": 7,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "里边",
+        "pinyin": "li3 bian5",
+        "pinyin_marks": "lǐ bian",
+        "ru": "внутри"
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "char": "金",
+    "variants": [
+      "钅",
+      "釒"
+    ],
+    "pinyin": "jin1",
+    "pinyin_marks": "jīn",
+    "en": "gold",
+    "ru": "золото, металл",
+    "strokes": 8,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "金子",
+        "pinyin": "jin1 zi5",
+        "pinyin_marks": "jīn zi",
+        "ru": "золото"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "char": "長",
+    "variants": [
+      "长"
+    ],
+    "pinyin": "chang2",
+    "pinyin_marks": "cháng",
+    "en": "long",
+    "ru": "длинный",
+    "strokes": 8,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "长",
+        "pinyin": "chang2",
+        "pinyin_marks": "cháng",
+        "ru": "длинный"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "char": "門",
+    "variants": [
+      "门"
+    ],
+    "pinyin": "men2",
+    "pinyin_marks": "mén",
+    "en": "gate",
+    "ru": "ворота, дверь",
+    "strokes": 8,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "门",
+        "pinyin": "men2",
+        "pinyin_marks": "mén",
+        "ru": "дверь"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "char": "阜",
+    "variants": [
+      "阝"
+    ],
+    "pinyin": "fu4",
+    "pinyin_marks": "fù",
+    "en": "mound",
+    "ru": "холм, насыпь (слева в иероглифе: 阝)",
+    "strokes": 8,
+    "hsk": 6,
+    "examples": [
+      {
+        "word": "阜",
+        "pinyin": "fu4",
+        "pinyin_marks": "fù",
+        "ru": "холм"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "char": "隶",
+    "variants": [],
+    "pinyin": "li4",
+    "pinyin_marks": "lì",
+    "en": "slave/reach",
+    "ru": "подчинённый; настигать",
+    "strokes": 8
+  },
+  {
+    "id": 172,
+    "char": "隹",
+    "variants": [],
+    "pinyin": "zhui1",
+    "pinyin_marks": "zhuī",
+    "en": "short-tailed bird",
+    "ru": "короткохвостая птица",
+    "strokes": 8
+  },
+  {
+    "id": 173,
+    "char": "雨",
+    "variants": [],
+    "pinyin": "yu3",
+    "pinyin_marks": "yǔ",
+    "en": "rain",
+    "ru": "дождь",
+    "strokes": 8,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "下雨",
+        "pinyin": "xia4 yu3",
+        "pinyin_marks": "xià yǔ",
+        "ru": "идёт дождь"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "char": "青",
+    "variants": [],
+    "pinyin": "qing1",
+    "pinyin_marks": "qīng",
+    "en": "blue/green",
+    "ru": "синий, зелёный",
+    "strokes": 8,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "青年",
+        "pinyin": "qing1 nian2",
+        "pinyin_marks": "qīng nián",
+        "ru": "молодёжь"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "char": "非",
+    "variants": [],
+    "pinyin": "fei1",
+    "pinyin_marks": "fēi",
+    "en": "wrong",
+    "ru": "неправильный; не-",
+    "strokes": 8,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "非常",
+        "pinyin": "fei1 chang2",
+        "pinyin_marks": "fēi cháng",
+        "ru": "очень"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "char": "面",
+    "variants": [],
+    "pinyin": "mian4",
+    "pinyin_marks": "miàn",
+    "en": "face",
+    "ru": "лицо",
+    "strokes": 9,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "面条",
+        "pinyin": "mian4 tiao2",
+        "pinyin_marks": "miàn tiáo",
+        "ru": "лапша"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "char": "革",
+    "variants": [],
+    "pinyin": "ge2",
+    "pinyin_marks": "gé",
+    "en": "leather",
+    "ru": "кожа, шкура",
+    "strokes": 9
+  },
+  {
+    "id": 178,
+    "char": "韋",
+    "variants": [
+      "韦"
+    ],
+    "pinyin": "wei2",
+    "pinyin_marks": "wéi",
+    "en": "tanned leather",
+    "ru": "выделанная кожа",
+    "strokes": 9
+  },
+  {
+    "id": 179,
+    "char": "韭",
+    "variants": [],
+    "pinyin": "jiu3",
+    "pinyin_marks": "jiǔ",
+    "en": "leek",
+    "ru": "лук-порей",
+    "strokes": 9
+  },
+  {
+    "id": 180,
+    "char": "音",
+    "variants": [],
+    "pinyin": "yin1",
+    "pinyin_marks": "yīn",
+    "en": "sound",
+    "ru": "звук",
+    "strokes": 9,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "声音",
+        "pinyin": "sheng1 yin1",
+        "pinyin_marks": "shēng yīn",
+        "ru": "звук"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "char": "頁",
+    "variants": [
+      "页"
+    ],
+    "pinyin": "ye4",
+    "pinyin_marks": "yè",
+    "en": "leaf/page",
+    "ru": "страница",
+    "strokes": 9
+  },
+  {
+    "id": 182,
+    "char": "風",
+    "variants": [
+      "风"
+    ],
+    "pinyin": "feng1",
+    "pinyin_marks": "fēng",
+    "en": "wind",
+    "ru": "ветер",
+    "strokes": 9,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "风",
+        "pinyin": "feng1",
+        "pinyin_marks": "fēng",
+        "ru": "ветер"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "char": "飛",
+    "variants": [
+      "飞"
+    ],
+    "pinyin": "fei1",
+    "pinyin_marks": "fēi",
+    "en": "fly",
+    "ru": "летать",
+    "strokes": 9,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "飞机",
+        "pinyin": "fei1 ji1",
+        "pinyin_marks": "fēi jī",
+        "ru": "самолёт"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "char": "食",
+    "variants": [
+      "饣",
+      "飠"
+    ],
+    "pinyin": "shi2",
+    "pinyin_marks": "shí",
+    "en": "eat",
+    "ru": "есть, пища",
+    "strokes": 9,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "食物",
+        "pinyin": "shi2 wu4",
+        "pinyin_marks": "shí wù",
+        "ru": "еда"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "char": "首",
+    "variants": [],
+    "pinyin": "shou3",
+    "pinyin_marks": "shǒu",
+    "en": "head",
+    "ru": "голова",
+    "strokes": 9,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "首都",
+        "pinyin": "shou3 du1",
+        "pinyin_marks": "shǒu dū",
+        "ru": "столица"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "char": "香",
+    "variants": [],
+    "pinyin": "xiang1",
+    "pinyin_marks": "xiāng",
+    "en": "fragrant",
+    "ru": "ароматный, благоухающий",
+    "strokes": 9,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "香蕉",
+        "pinyin": "xiang1 jiao1",
+        "pinyin_marks": "xiāng jiāo",
+        "ru": "банан"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "char": "馬",
+    "variants": [
+      "马"
+    ],
+    "pinyin": "ma3",
+    "pinyin_marks": "mǎ",
+    "en": "horse",
+    "ru": "лошадь",
+    "strokes": 10,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "马",
+        "pinyin": "ma3",
+        "pinyin_marks": "mǎ",
+        "ru": "лошадь"
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "char": "骨",
+    "variants": [],
+    "pinyin": "gu3",
+    "pinyin_marks": "gǔ",
+    "en": "bone",
+    "ru": "кость",
+    "strokes": 10,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "骨头",
+        "pinyin": "gu3 tou5",
+        "pinyin_marks": "gǔ tou",
+        "ru": "кость"
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "char": "高",
+    "variants": [],
+    "pinyin": "gao1",
+    "pinyin_marks": "gāo",
+    "en": "tall",
+    "ru": "высокий",
+    "strokes": 10,
+    "hsk": 1,
+    "examples": [
+      {
+        "word": "高兴",
+        "pinyin": "gao1 xing4",
+        "pinyin_marks": "gāo xìng",
+        "ru": "радостный"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "char": "髟",
+    "variants": [],
+    "pinyin": "biao1",
+    "pinyin_marks": "biāo",
+    "en": "hair",
+    "ru": "длинные волосы",
+    "strokes": 10
+  },
+  {
+    "id": 191,
+    "char": "鬥",
+    "variants": [],
+    "pinyin": "dou4",
+    "pinyin_marks": "dòu",
+    "en": "fight",
+    "ru": "драка, борьба",
+    "strokes": 10
+  },
+  {
+    "id": 192,
+    "char": "鬯",
+    "variants": [],
+    "pinyin": "chang4",
+    "pinyin_marks": "chàng",
+    "en": "sacrificial wine",
+    "ru": "жертвенное вино",
+    "strokes": 10
+  },
+  {
+    "id": 193,
+    "char": "鬲",
+    "variants": [],
+    "pinyin": "li4",
+    "pinyin_marks": "lì",
+    "en": "cauldron",
+    "ru": "треножник, котёл",
+    "strokes": 10
+  },
+  {
+    "id": 194,
+    "char": "鬼",
+    "variants": [],
+    "pinyin": "gui3",
+    "pinyin_marks": "guǐ",
+    "en": "ghost",
+    "ru": "призрак, дух",
+    "strokes": 10,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "鬼",
+        "pinyin": "gui3",
+        "pinyin_marks": "guǐ",
+        "ru": "призрак"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "char": "魚",
+    "variants": [
+      "鱼"
+    ],
+    "pinyin": "yu2",
+    "pinyin_marks": "yú",
+    "en": "fish",
+    "ru": "рыба",
+    "strokes": 11,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "鱼",
+        "pinyin": "yu2",
+        "pinyin_marks": "yú",
+        "ru": "рыба"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "char": "鳥",
+    "variants": [
+      "鸟"
+    ],
+    "pinyin": "niao3",
+    "pinyin_marks": "niǎo",
+    "en": "bird",
+    "ru": "птица",
+    "strokes": 11,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "鸟",
+        "pinyin": "niao3",
+        "pinyin_marks": "niǎo",
+        "ru": "птица"
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "char": "鹵",
+    "variants": [
+      "卤"
+    ],
+    "pinyin": "lu3",
+    "pinyin_marks": "lǔ",
+    "en": "salt",
+    "ru": "соль",
+    "strokes": 11
+  },
+  {
+    "id": 198,
+    "char": "鹿",
+    "variants": [],
+    "pinyin": "lu4",
+    "pinyin_marks": "lù",
+    "en": "deer",
+    "ru": "олень",
+    "strokes": 11,
+    "hsk": 6,
+    "examples": [
+      {
+        "word": "鹿",
+        "pinyin": "lu4",
+        "pinyin_marks": "lù",
+        "ru": "олень"
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "char": "麥",
+    "variants": [
+      "麦"
+    ],
+    "pinyin": "mai4",
+    "pinyin_marks": "mài",
+    "en": "wheat",
+    "ru": "пшеница",
+    "strokes": 11,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "麦子",
+        "pinyin": "mai4 zi5",
+        "pinyin_marks": "mài zi",
+        "ru": "пшеница"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "char": "麻",
+    "variants": [],
+    "pinyin": "ma2",
+    "pinyin_marks": "má",
+    "en": "hemp",
+    "ru": "конопля",
+    "strokes": 11
+  },
+  {
+    "id": 201,
+    "char": "黃",
+    "variants": [
+      "黄"
+    ],
+    "pinyin": "huang2",
+    "pinyin_marks": "huáng",
+    "en": "yellow",
+    "ru": "жёлтый",
+    "strokes": 12,
+    "hsk": 3,
+    "examples": [
+      {
+        "word": "黄色",
+        "pinyin": "huang2 se4",
+        "pinyin_marks": "huáng sè",
+        "ru": "жёлтый цвет"
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "char": "黍",
+    "variants": [],
+    "pinyin": "shu3",
+    "pinyin_marks": "shǔ",
+    "en": "millet",
+    "ru": "просо",
+    "strokes": 12
+  },
+  {
+    "id": 203,
+    "char": "黑",
+    "variants": [],
+    "pinyin": "hei1",
+    "pinyin_marks": "hēi",
+    "en": "black",
+    "ru": "чёрный",
+    "strokes": 12,
+    "hsk": 2,
+    "examples": [
+      {
+        "word": "黑色",
+        "pinyin": "hei1 se4",
+        "pinyin_marks": "hēi sè",
+        "ru": "чёрный цвет"
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "char": "黹",
+    "variants": [],
+    "pinyin": "zhi3",
+    "pinyin_marks": "zhǐ",
+    "en": "embroidery",
+    "ru": "вышивка",
+    "strokes": 12
+  },
+  {
+    "id": 205,
+    "char": "黽",
+    "variants": [
+      "黾"
+    ],
+    "pinyin": "min3",
+    "pinyin_marks": "mǐn",
+    "en": "frog",
+    "ru": "лягушка",
+    "strokes": 13
+  },
+  {
+    "id": 206,
+    "char": "鼎",
+    "variants": [],
+    "pinyin": "ding3",
+    "pinyin_marks": "dǐng",
+    "en": "tripod",
+    "ru": "треножник",
+    "strokes": 13
+  },
+  {
+    "id": 207,
+    "char": "鼓",
+    "variants": [],
+    "pinyin": "gu3",
+    "pinyin_marks": "gǔ",
+    "en": "drum",
+    "ru": "барабан",
+    "strokes": 13
+  },
+  {
+    "id": 208,
+    "char": "鼠",
+    "variants": [],
+    "pinyin": "shu3",
+    "pinyin_marks": "shǔ",
+    "en": "rat",
+    "ru": "крыса",
+    "strokes": 13,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "老鼠",
+        "pinyin": "lao3 shu3",
+        "pinyin_marks": "lǎo shǔ",
+        "ru": "мышь, крыса"
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "char": "鼻",
+    "variants": [],
+    "pinyin": "bi2",
+    "pinyin_marks": "bí",
+    "en": "nose",
+    "ru": "нос",
+    "strokes": 14,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "鼻子",
+        "pinyin": "bi2 zi5",
+        "pinyin_marks": "bí zi",
+        "ru": "нос"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "char": "齊",
+    "variants": [
+      "齐"
+    ],
+    "pinyin": "qi2",
+    "pinyin_marks": "qí",
+    "en": "even",
+    "ru": "ровный, равный",
+    "strokes": 14
+  },
+  {
+    "id": 211,
+    "char": "齒",
+    "variants": [
+      "齿"
+    ],
+    "pinyin": "chi3",
+    "pinyin_marks": "chǐ",
+    "en": "tooth",
+    "ru": "зуб",
+    "strokes": 15,
+    "hsk": 5,
+    "examples": [
+      {
+        "word": "牙齿",
+        "pinyin": "ya2 chi3",
+        "pinyin_marks": "yá chǐ",
+        "ru": "зубы"
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "char": "龍",
+    "variants": [
+      "龙"
+    ],
+    "pinyin": "long2",
+    "pinyin_marks": "lóng",
+    "en": "dragon",
+    "ru": "дракон",
+    "strokes": 16,
+    "hsk": 4,
+    "examples": [
+      {
+        "word": "龙",
+        "pinyin": "long2",
+        "pinyin_marks": "lóng",
+        "ru": "дракон"
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "char": "龜",
+    "variants": [
+      "龟"
+    ],
+    "pinyin": "gui1",
+    "pinyin_marks": "guī",
+    "en": "turtle",
+    "ru": "черепаха",
+    "strokes": 16
+  },
+  {
+    "id": 214,
+    "char": "龠",
+    "variants": [],
+    "pinyin": "yue4",
+    "pinyin_marks": "yuè",
+    "en": "flute",
+    "ru": "флейта (духовой инструмент)",
+    "strokes": 17
+  }
+]

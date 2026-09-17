@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% from "_radical_card.html" import radical_card %}
+{% block title %}№{{ r.id }} {{ r.char }} — {{ r.ru }}{% endblock %}
+{% block content %}
+<h1>Ключ №{{ r.id }}</h1>
+{{ radical_card(r) }}
+<p class="back-link"><a href="{{ url_for('browse') }}">← Ко всем ключам</a></p>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% macro radical_card(r, show_stroke_order=true) %}
+<div class="card">
+  <div class="card-glyph-col">
+    <div class="glyph">{{ r.char }}</div>
+    {% if r.variants %}
+      <div class="variants">варианты: {{ r.variants | join(' ') }}</div>
+    {% endif %}
+    {% if show_stroke_order %}
+      <div class="stroke-order" data-char="{{ r.char }}"></div>
+      <div class="stroke-order-hint">Порядок черт (анимация требует интернет)</div>
+    {% endif %}
+  </div>
+  <div class="card-info-col">
+    <h2>{% if r.id %}№{{ r.id }} &middot; {% endif %}{{ r.char }}</h2>
+    <p class="pinyin">{{ r.pinyin_marks or r.pinyin }}</p>
+    <p class="ru-meaning">{{ r.ru }}</p>
+    {% if r.en %}<p class="en-meaning">{{ r.en }}</p>{% endif %}
+    <ul class="facts">
+      <li><strong>Черт:</strong> {{ r.strokes }}</li>
+      {% if r.hsk %}<li><strong>Частотность:</strong> встречается на уровне HSK {{ r.hsk }}</li>{% endif %}
+    </ul>
+    {% if r.examples %}
+      <div class="examples">
+        <h3>Примеры слов</h3>
+        <ul>
+          {% for ex in r.examples %}
+            <li><span class="ex-word">{{ ex.word }}</span> <span class="ex-pinyin">[{{ ex.pinyin_marks or ex.pinyin }}]</span> — {{ ex.ru }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

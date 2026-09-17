@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="warn">{{ message }}</p>
+<p class="back-link"><a href="{{ url_for('index') }}">← На главную</a> ·
+  <a href="{{ url_for('browse') }}">Все 214 ключей</a></p>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% from "_radical_card.html" import radical_card %}
+{% macro resolved_entry(c) %}
+  {% if c.source == 'radical' %}
+    {{ radical_card(c.radical) }}
+  {% else %}
+    <div class="card fallback-card">
+      <div class="card-glyph-col">
+        <div class="glyph">{{ c.char }}</div>
+        <div class="stroke-order" data-char="{{ c.char }}"></div>
+        <div class="stroke-order-hint">Порядок черт (анимация требует интернет)</div>
+      </div>
+      <div class="card-info-col">
+        <h2>{{ c.char }}</h2>
+        {% if c.pinyin %}<p class="pinyin">{{ c.pinyin }}</p>{% endif %}
+        {% if c.ru %}
+          <p class="ru-meaning">{{ c.ru }}</p>
+        {% elif c.en %}
+          <p class="ru-meaning">{{ c.en }}</p>
+          <p class="hint">Перевод на русский недоступен (нет в базе ключей, онлайн-перевод выключен
+            или не сработал) — показан английский из офлайн-словаря CC-CEDICT.</p>
+        {% else %}
+          <p class="ru-meaning muted">Перевод недоступен — символа нет ни в базе ключей, ни в словаре CC-CEDICT</p>
+        {% endif %}
+        <ul class="facts">
+          <li class="js-stroke-count" data-char="{{ c.char }}" hidden><strong>Черт:</strong> <span class="sc-value"></span></li>
+        </ul>
+        <p class="note">Этот символ не входит в список из 214 ключей Канси — это либо составной иероглиф, либо OCR ошибся.</p>
+      </div>
+    </div>
+  {% endif %}
+{% endmacro %}

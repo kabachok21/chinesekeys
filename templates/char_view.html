@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% from "_resolved_entry.html" import resolved_entry %}
+{% block title %}{{ c.char }} — разбор символа{% endblock %}
+{% block content %}
+<h1>Разбор символа</h1>
+{{ resolved_entry(c) }}
+<p class="back-link"><a href="{{ url_for('index') }}">← Распознать другое фото</a> ·
+  <a href="{{ url_for('browse') }}">Все 214 ключей</a></p>
+{% endblock %}

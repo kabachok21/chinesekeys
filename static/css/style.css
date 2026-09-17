@@ -1,0 +1,261 @@
+:root {
+  color-scheme: light dark;
+  --bg: #faf7f2;
+  --fg: #26211c;
+  --muted: #8a7f70;
+  --accent: #b3261e;
+  --accent-soft: #f3e3d3;
+  --card-bg: #ffffff;
+  --border: #e6ddd0;
+  --radius: 14px;
+  --flash-bg: #fdecea;
+  --flash-border: #f3b9b2;
+  --flash-fg: #7a1f16;
+  --warn-bg: #fff6e0;
+  --warn-border: #f0d68a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1815;
+    --fg: #f1ece4;
+    --muted: #a89b89;
+    --accent: #e0655a;
+    --accent-soft: #3a2e26;
+    --card-bg: #262019;
+    --border: #3a322a;
+    --flash-bg: #3a201d;
+    --flash-border: #6b2a23;
+    --flash-fg: #f4a89e;
+    --warn-bg: #362b12;
+    --warn-border: #6b5420;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.brand span { color: var(--fg); font-weight: 500; font-size: 0.9rem; }
+
+.topbar nav a {
+  margin-left: 18px;
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 500;
+}
+.topbar nav a:hover { color: var(--accent); }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+h1 { font-size: 1.5rem; margin-bottom: 6px; }
+.lead { color: var(--muted); margin-top: 0; }
+
+.flash {
+  background: var(--flash-bg);
+  border: 1px solid var(--flash-border);
+  color: var(--flash-fg);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+.upload-form { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+
+.file-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 180px;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+}
+.file-drop input[type=file] { display: none; }
+.file-drop img { max-width: 100%; max-height: 260px; border-radius: 8px; }
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.checkbox-row input { margin-top: 3px; }
+
+.btn-primary, .btn-secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: #fff; align-self: flex-start; }
+.btn-primary:hover { background: #931f18; }
+.btn-primary.is-loading { opacity: 0.7; cursor: wait; }
+.btn-secondary { background: var(--accent-soft); color: var(--fg); }
+
+.hint { color: var(--muted); font-size: 0.88rem; }
+
+.uploaded-photo {
+  max-width: 220px;
+  max-height: 220px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: 12px 0;
+  display: block;
+}
+
+.card {
+  display: flex;
+  gap: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.card-glyph-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+}
+
+.glyph {
+  font-size: 5rem;
+  line-height: 1;
+  font-family: "Microsoft YaHei", "SimSun", "PingFang SC", sans-serif;
+}
+
+.variants { color: var(--muted); font-size: 0.85rem; }
+
+.stroke-order {
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+.stroke-order-hint { color: var(--muted); font-size: 0.75rem; max-width: 140px; text-align: center; }
+
+.card-info-col { flex: 1; min-width: 220px; }
+.card-info-col h2 { margin: 0 0 4px; font-size: 1.3rem; }
+.pinyin { font-size: 1.15rem; color: var(--accent); margin: 0 0 4px; font-weight: 600; }
+.ru-meaning { font-size: 1.05rem; margin: 0 0 2px; }
+.ru-meaning.muted { color: var(--muted); font-style: italic; }
+.en-meaning { color: var(--muted); margin: 0 0 10px; }
+.note { color: var(--muted); font-size: 0.88rem; }
+
+.facts { list-style: none; padding: 0; margin: 10px 0; display: flex; gap: 18px; flex-wrap: wrap; }
+.facts li { background: var(--accent-soft); border-radius: 8px; padding: 4px 10px; font-size: 0.88rem; }
+
+.examples h3 { font-size: 1rem; margin-bottom: 6px; }
+.examples ul { margin: 0; padding-left: 18px; }
+.ex-word { font-weight: 600; }
+.ex-pinyin { color: var(--accent); }
+
+.alternatives { margin-top: 18px; }
+.alt-list { display: flex; gap: 8px; flex-wrap: wrap; }
+.alt-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "Microsoft YaHei", "SimSun", sans-serif;
+}
+.alt-chip:hover { background: #e8cdb0; }
+
+.warn { background: var(--warn-bg); border: 1px solid var(--warn-border); color: var(--fg); padding: 12px 16px; border-radius: var(--radius); }
+
+.back-link { margin-top: 20px; }
+.back-link a { color: var(--accent); text-decoration: none; }
+
+.search-form { display: flex; gap: 8px; margin: 12px 0; }
+.search-form input[type=text] {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+.count { color: var(--muted); font-size: 0.88rem; }
+.section-title { margin-top: 32px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-decoration: none;
+  color: var(--fg);
+  text-align: center;
+}
+.grid-item:hover { border-color: var(--accent); }
+.grid-glyph { font-size: 2rem; font-family: "Microsoft YaHei", "SimSun", sans-serif; }
+.grid-pinyin { font-size: 0.82rem; color: var(--accent); }
+.grid-ru { font-size: 0.78rem; color: var(--muted); }
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .glyph { font-size: 4rem; }
+  .card { padding: 16px; gap: 16px; }
+}

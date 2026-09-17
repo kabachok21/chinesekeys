@@ -1,0 +1,534 @@
+[
+  {
+    "char": "爱",
+    "pinyin": "ai4",
+    "pinyin_marks": "ài",
+    "ru": "любить",
+    "strokes": 10
+  },
+  {
+    "char": "吧",
+    "pinyin": "ba5",
+    "pinyin_marks": "ba",
+    "ru": "частица (предложение, просьба)",
+    "strokes": 7
+  },
+  {
+    "char": "爸",
+    "pinyin": "ba4",
+    "pinyin_marks": "bà",
+    "ru": "папа",
+    "strokes": 8
+  },
+  {
+    "char": "杯",
+    "pinyin": "bei1",
+    "pinyin_marks": "bēi",
+    "ru": "чашка, стакан",
+    "strokes": 8
+  },
+  {
+    "char": "菜",
+    "pinyin": "cai4",
+    "pinyin_marks": "cài",
+    "ru": "овощи; блюдо (еда)",
+    "strokes": 11
+  },
+  {
+    "char": "茶",
+    "pinyin": "cha2",
+    "pinyin_marks": "chá",
+    "ru": "чай",
+    "strokes": 9
+  },
+  {
+    "char": "唱",
+    "pinyin": "chang4",
+    "pinyin_marks": "chàng",
+    "ru": "петь",
+    "strokes": 11
+  },
+  {
+    "char": "吃",
+    "pinyin": "chi1",
+    "pinyin_marks": "chī",
+    "ru": "есть, кушать",
+    "strokes": 6
+  },
+  {
+    "char": "打",
+    "pinyin": "da3",
+    "pinyin_marks": "dǎ",
+    "ru": "бить; играть (打球)",
+    "strokes": 5
+  },
+  {
+    "char": "都",
+    "pinyin": "dou1",
+    "pinyin_marks": "dōu",
+    "ru": "все; уже",
+    "strokes": 10
+  },
+  {
+    "char": "对",
+    "pinyin": "dui4",
+    "pinyin_marks": "duì",
+    "ru": "правильно; пара",
+    "strokes": 5
+  },
+  {
+    "char": "饭",
+    "pinyin": "fan4",
+    "pinyin_marks": "fàn",
+    "ru": "еда, рис (варёный)",
+    "strokes": 7
+  },
+  {
+    "char": "狗",
+    "pinyin": "gou3",
+    "pinyin_marks": "gǒu",
+    "ru": "собака",
+    "strokes": 8
+  },
+  {
+    "char": "还",
+    "pinyin": "hai2",
+    "pinyin_marks": "hái",
+    "ru": "ещё; всё же",
+    "strokes": 7
+  },
+  {
+    "char": "汉",
+    "pinyin": "han4",
+    "pinyin_marks": "hàn",
+    "ru": "хань (этнос); китайский (汉语)",
+    "strokes": 5
+  },
+  {
+    "char": "好",
+    "pinyin": "hao3",
+    "pinyin_marks": "hǎo",
+    "ru": "хороший",
+    "strokes": 6
+  },
+  {
+    "char": "喝",
+    "pinyin": "he1",
+    "pinyin_marks": "hē",
+    "ru": "пить",
+    "strokes": 12
+  },
+  {
+    "char": "很",
+    "pinyin": "hen3",
+    "pinyin_marks": "hěn",
+    "ru": "очень",
+    "strokes": 9
+  },
+  {
+    "char": "话",
+    "pinyin": "hua4",
+    "pinyin_marks": "huà",
+    "ru": "слово, речь",
+    "strokes": 8
+  },
+  {
+    "char": "会",
+    "pinyin": "hui4",
+    "pinyin_marks": "huì",
+    "ru": "уметь; собрание",
+    "strokes": 6
+  },
+  {
+    "char": "家",
+    "pinyin": "jia1",
+    "pinyin_marks": "jiā",
+    "ru": "дом, семья",
+    "strokes": 10
+  },
+  {
+    "char": "叫",
+    "pinyin": "jiao4",
+    "pinyin_marks": "jiào",
+    "ru": "звать(ся)",
+    "strokes": 5
+  },
+  {
+    "char": "看",
+    "pinyin": "kan4",
+    "pinyin_marks": "kàn",
+    "ru": "смотреть",
+    "strokes": 9
+  },
+  {
+    "char": "可",
+    "pinyin": "ke3",
+    "pinyin_marks": "kě",
+    "ru": "можно",
+    "strokes": 5
+  },
+  {
+    "char": "来",
+    "pinyin": "lai2",
+    "pinyin_marks": "lái",
+    "ru": "приходить",
+    "strokes": 7
+  },
+  {
+    "char": "冷",
+    "pinyin": "leng3",
+    "pinyin_marks": "lěng",
+    "ru": "холодный",
+    "strokes": 7
+  },
+  {
+    "char": "忙",
+    "pinyin": "mang2",
+    "pinyin_marks": "máng",
+    "ru": "занятой",
+    "strokes": 6
+  },
+  {
+    "char": "猫",
+    "pinyin": "mao1",
+    "pinyin_marks": "māo",
+    "ru": "кошка",
+    "strokes": 11
+  },
+  {
+    "char": "没",
+    "pinyin": "mei2",
+    "pinyin_marks": "méi",
+    "ru": "нет (отрицание для 有)",
+    "strokes": 7
+  },
+  {
+    "char": "们",
+    "pinyin": "men5",
+    "pinyin_marks": "men",
+    "ru": "суффикс множественного числа",
+    "strokes": 5
+  },
+  {
+    "char": "那",
+    "pinyin": "na4",
+    "pinyin_marks": "nà",
+    "ru": "тот",
+    "strokes": 6
+  },
+  {
+    "char": "哪",
+    "pinyin": "na3",
+    "pinyin_marks": "nǎ",
+    "ru": "который, какой",
+    "strokes": 9
+  },
+  {
+    "char": "你",
+    "pinyin": "ni3",
+    "pinyin_marks": "nǐ",
+    "ru": "ты",
+    "strokes": 7
+  },
+  {
+    "char": "朋",
+    "pinyin": "peng2",
+    "pinyin_marks": "péng",
+    "ru": "друг (в 朋友)",
+    "strokes": 8
+  },
+  {
+    "char": "起",
+    "pinyin": "qi3",
+    "pinyin_marks": "qǐ",
+    "ru": "подниматься",
+    "strokes": 10
+  },
+  {
+    "char": "去",
+    "pinyin": "qu4",
+    "pinyin_marks": "qù",
+    "ru": "идти, уходить",
+    "strokes": 5
+  },
+  {
+    "char": "让",
+    "pinyin": "rang4",
+    "pinyin_marks": "ràng",
+    "ru": "позволять, пусть",
+    "strokes": 5
+  },
+  {
+    "char": "谁",
+    "pinyin": "shui2",
+    "pinyin_marks": "shuí",
+    "ru": "кто",
+    "strokes": 10
+  },
+  {
+    "char": "谢",
+    "pinyin": "xie4",
+    "pinyin_marks": "xiè",
+    "ru": "благодарить",
+    "strokes": 12
+  },
+  {
+    "char": "想",
+    "pinyin": "xiang3",
+    "pinyin_marks": "xiǎng",
+    "ru": "думать; хотеть",
+    "strokes": 13
+  },
+  {
+    "char": "学",
+    "pinyin": "xue2",
+    "pinyin_marks": "xué",
+    "ru": "учиться",
+    "strokes": 8
+  },
+  {
+    "char": "要",
+    "pinyin": "yao4",
+    "pinyin_marks": "yào",
+    "ru": "хотеть; нужно",
+    "strokes": 9
+  },
+  {
+    "char": "也",
+    "pinyin": "ye3",
+    "pinyin_marks": "yě",
+    "ru": "тоже",
+    "strokes": 3
+  },
+  {
+    "char": "医",
+    "pinyin": "yi1",
+    "pinyin_marks": "yī",
+    "ru": "врач; медицина",
+    "strokes": 7
+  },
+  {
+    "char": "银",
+    "pinyin": "yin2",
+    "pinyin_marks": "yín",
+    "ru": "серебро",
+    "strokes": 11
+  },
+  {
+    "char": "语",
+    "pinyin": "yu3",
+    "pinyin_marks": "yǔ",
+    "ru": "язык (речь)",
+    "strokes": 9
+  },
+  {
+    "char": "笑",
+    "pinyin": "xiao4",
+    "pinyin_marks": "xiào",
+    "ru": "смеяться, улыбаться",
+    "strokes": 10
+  },
+  {
+    "char": "快",
+    "pinyin": "kuai4",
+    "pinyin_marks": "kuài",
+    "ru": "быстрый",
+    "strokes": 7
+  },
+  {
+    "char": "慢",
+    "pinyin": "man4",
+    "pinyin_marks": "màn",
+    "ru": "медленный",
+    "strokes": 14
+  },
+  {
+    "char": "懂",
+    "pinyin": "dong3",
+    "pinyin_marks": "dǒng",
+    "ru": "понимать",
+    "strokes": 15
+  },
+  {
+    "char": "喜",
+    "pinyin": "xi3",
+    "pinyin_marks": "xǐ",
+    "ru": "радость (喜欢 — нравиться)",
+    "strokes": 12
+  },
+  {
+    "char": "欢",
+    "pinyin": "huan1",
+    "pinyin_marks": "huān",
+    "ru": "радостный",
+    "strokes": 6
+  },
+  {
+    "char": "漂",
+    "pinyin": "piao1",
+    "pinyin_marks": "piāo",
+    "ru": "плыть по течению (в 漂亮 — красивый)",
+    "strokes": 14
+  },
+  {
+    "char": "亮",
+    "pinyin": "liang4",
+    "pinyin_marks": "liàng",
+    "ru": "яркий, светлый",
+    "strokes": 9
+  },
+  {
+    "char": "真",
+    "pinyin": "zhen1",
+    "pinyin_marks": "zhēn",
+    "ru": "настоящий, действительно",
+    "strokes": 10
+  },
+  {
+    "char": "假",
+    "pinyin": "jia3",
+    "pinyin_marks": "jiǎ",
+    "ru": "фальшивый; отпуск (假期)",
+    "strokes": 11
+  },
+  {
+    "char": "问",
+    "pinyin": "wen4",
+    "pinyin_marks": "wèn",
+    "ru": "спрашивать",
+    "strokes": 6
+  },
+  {
+    "char": "题",
+    "pinyin": "ti2",
+    "pinyin_marks": "tí",
+    "ru": "вопрос, тема",
+    "strokes": 15
+  },
+  {
+    "char": "考",
+    "pinyin": "kao3",
+    "pinyin_marks": "kǎo",
+    "ru": "экзаменовать(ся)",
+    "strokes": 6
+  },
+  {
+    "char": "试",
+    "pinyin": "shi4",
+    "pinyin_marks": "shì",
+    "ru": "пробовать",
+    "strokes": 8
+  },
+  {
+    "char": "同",
+    "pinyin": "tong2",
+    "pinyin_marks": "tóng",
+    "ru": "одинаковый, тот же",
+    "strokes": 6
+  },
+  {
+    "char": "师",
+    "pinyin": "shi1",
+    "pinyin_marks": "shī",
+    "ru": "учитель, наставник",
+    "strokes": 6
+  },
+  {
+    "char": "友",
+    "pinyin": "you3",
+    "pinyin_marks": "yǒu",
+    "ru": "друг",
+    "strokes": 4
+  },
+  {
+    "char": "不",
+    "pinyin": "bu4",
+    "pinyin_marks": "bù",
+    "ru": "не, нет",
+    "strokes": 4
+  },
+  {
+    "char": "关",
+    "pinyin": "guan1",
+    "pinyin_marks": "guān",
+    "ru": "закрывать; касаться (关于)",
+    "strokes": 6
+  },
+  {
+    "char": "系",
+    "pinyin": "xi4",
+    "pinyin_marks": "xì",
+    "ru": "связь; факультет",
+    "strokes": 7
+  },
+  {
+    "char": "再",
+    "pinyin": "zai4",
+    "pinyin_marks": "zài",
+    "ru": "снова, ещё раз",
+    "strokes": 6
+  },
+  {
+    "char": "现",
+    "pinyin": "xian4",
+    "pinyin_marks": "xiàn",
+    "ru": "являться, показываться (现在 — сейчас)",
+    "strokes": 8
+  },
+  {
+    "char": "在",
+    "pinyin": "zai4",
+    "pinyin_marks": "zài",
+    "ru": "находиться в; в (предлог)",
+    "strokes": 6
+  },
+  {
+    "char": "时",
+    "pinyin": "shi2",
+    "pinyin_marks": "shí",
+    "ru": "время",
+    "strokes": 7
+  },
+  {
+    "char": "候",
+    "pinyin": "hou4",
+    "pinyin_marks": "hòu",
+    "ru": "ждать; момент (时候 — время, момент)",
+    "strokes": 10
+  },
+  {
+    "char": "地",
+    "pinyin": "di4",
+    "pinyin_marks": "dì",
+    "ru": "земля; место",
+    "strokes": 6
+  },
+  {
+    "char": "东",
+    "pinyin": "dong1",
+    "pinyin_marks": "dōng",
+    "ru": "восток",
+    "strokes": 5
+  },
+  {
+    "char": "南",
+    "pinyin": "nan2",
+    "pinyin_marks": "nán",
+    "ru": "юг",
+    "strokes": 9
+  },
+  {
+    "char": "北",
+    "pinyin": "bei3",
+    "pinyin_marks": "běi",
+    "ru": "север",
+    "strokes": 5
+  },
+  {
+    "char": "边",
+    "pinyin": "bian1",
+    "pinyin_marks": "biān",
+    "ru": "сторона, край",
+    "strokes": 5
+  }
+]

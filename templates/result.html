@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "_resolved_entry.html" import resolved_entry %}
+{% block title %}Результат распознавания{% endblock %}
+{% block content %}
+<h1>Результат распознавания</h1>
+
+{% if photo_data_uri %}
+  <img class="uploaded-photo" src="{{ photo_data_uri }}" alt="Загруженное фото">
+{% endif %}
+
+{% if not result.candidates %}
+  <p class="warn">Не удалось распознать символ на фото. Попробуй сфотографировать один ключ крупнее,
+    на светлом фоне и без бликов, либо найди его вручную ниже.</p>
+  <form method="get" action="{{ url_for('browse') }}" class="search-form">
+    <input type="text" name="q" placeholder="Поиск: иероглиф, пиньинь, перевод...">
+    <button type="submit" class="btn-secondary">Найти вручную</button>
+  </form>
+{% else %}
+  {{ resolved_entry(result.candidates[0]) }}
+
+  {% if result.candidates|length > 1 %}
+    <div class="alternatives">
+      <h3>Распозналось не то? Другие варианты OCR:</h3>
+      <div class="alt-list">
+        {% for c in result.candidates[1:] %}
+          <a class="alt-chip" href="{{ url_for('char_view', char=c.char) }}{% if online_translate %}?translate=1{% endif %}">{{ c.char }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
+
+<p class="back-link"><a href="{{ url_for('index') }}">← Попробовать другое фото</a></p>
+{% endblock %}

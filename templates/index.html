@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Распознать ключ по фото{% endblock %}
+{% block content %}
+<h1>Сфотографируй ключ или иероглиф</h1>
+<p class="lead">Загрузи фото одного ключа (радикала) или иероглифа — приложение попробует его распознать
+  и покажет картинку, транскрипцию (пиньинь) и перевод на русский.</p>
+
+<form method="post" action="{{ url_for('recognize_view') }}" enctype="multipart/form-data" class="upload-form">
+  <label class="file-drop" id="fileDrop">
+    <input type="file" name="photo" accept="image/*" capture="environment" required id="photoInput">
+    <span id="fileDropText">Нажми, чтобы сделать фото или выбрать файл — или вставь картинку сочетанием Ctrl+V</span>
+    <img id="preview" alt="предпросмотр" hidden>
+  </label>
+
+  <label class="checkbox-row">
+    <input type="checkbox" name="online_translate" value="1">
+    Если это не один из 214 ключей — переводить онлайн (отправляет один символ в сервис перевода)
+  </label>
+
+  <button type="submit" class="btn-primary" id="submitBtn">Распознать</button>
+</form>
+
+<p class="hint">Совет: фотографируй один символ крупно, на светлом фоне, без бликов — так OCR распознаёт лучше.</p>
+{% endblock %}
