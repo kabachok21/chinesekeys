@@ -50,6 +50,12 @@ def _get_engine():
                 "Det.model_path": os.path.join(_MODELS_DIR, "PP-OCRv6_det_small.onnx"),
                 "Cls.model_path": os.path.join(_MODELS_DIR, "ch_ppocr_mobile_v2.0_cls_mobile.onnx"),
                 "Global.log_level": "warning",
+                # One thread per session: by default onnxruntime spawns a thread per
+                # HOST core, but a small container (Render free tier is ~0.1 CPU)
+                # only gets a sliver of one, and the busy-waiting threads fight
+                # for it - a single-glyph inference then takes seconds.
+                "EngineConfig.onnxruntime.intra_op_num_threads": 1,
+                "EngineConfig.onnxruntime.inter_op_num_threads": 1,
             }
         )
     except Exception:

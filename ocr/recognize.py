@@ -66,6 +66,7 @@ def _tessdata_dir_config():
 
 
 _configure_tesseract()
+cv2.setNumThreads(1)
 
 
 # A 12MP phone photo carries no extra information for one glyph but makes
@@ -309,6 +310,12 @@ _ROTATION_RETRY_ANGLES = (-20, 20, 180)
 # of the request time and changed nothing.
 _CONFIDENT_SCORE = 0.9
 
+# Tesseract only contributes a few extra alternative guesses, but each call
+# starts a subprocess that loads its ~40MB model: ~0.2s locally, ~4s per call
+# on a 0.1-CPU free-tier container (a tilted photo took 10s instead of 2s).
+# Off by default; set USE_TESSERACT=1 to bring it back on a faster host.
+_USE_TESSERACT = os.environ.get("USE_TESSERACT") == "1"
+
 
 def ocr_candidates(pil_img):
     """Merge OCR sources into one ranked list, best guess first.
@@ -329,7 +336,7 @@ def ocr_candidates(pil_img):
     primary_sorted = (ch for ch, _ in sorted(primary, key=lambda item: item[1], reverse=True))
 
     order = list(dict.fromkeys(primary_sorted))
-    if not confident:
+    if _USE_TESSERACT and not confident:
         for ch in tesseract_candidates(pil_img):
             if ch not in order:
                 order.append(ch)

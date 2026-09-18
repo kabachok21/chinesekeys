@@ -8,6 +8,7 @@
   if (!form || !input) return;
   const camera = document.getElementById("cameraInput");
   const btn = document.getElementById("submitBtn");
+  const slowHint = document.getElementById("slowHint");
   const dropText = document.getElementById("fileDropText");
   const cropper = document.getElementById("cropper");
   const stage = document.getElementById("cropStage");
@@ -27,6 +28,7 @@
   function setLoading() {
     btn.disabled = true;
     btn.textContent = "Распознаём…";
+    setTimeout(() => { slowHint.hidden = false; }, 6000);
     btn.classList.add("is-loading");
   }
 
