@@ -1,13 +1,18 @@
-"""Image preprocessing + Tesseract OCR + lookup pipeline.
+"""Image preprocessing + OCR + lookup pipeline.
 
 Given a photo of a single Chinese radical/character, this module:
 1. preprocesses the image (crop to ink, upscale, binarize) so a photo of a
-   key on paper/screen looks more like the clean glyphs Tesseract expects,
-2. runs Tesseract (chi_sim) in a few single-character page-segmentation
-   modes and collects candidate hanzi,
+   key on paper/screen looks more like the clean glyphs the OCR steps
+   expect,
+2. classifies it with two independent OCR sources and merges the results
+   (best guess first) - see ocr_candidates(): ocr/hanzi_ocr.py's ONNX
+   single-character model (primary; markedly more reliable on this app's
+   actual input than line-oriented OCR) and Tesseract (chi_sim, secondary,
+   contributes extra alternative guesses if it disagrees),
 3. resolves each candidate against the 214 Kangxi radicals; candidates that
    are real hanzi but not one of the 214 radicals still get a pinyin
-   reading and (best-effort, online) a Russian translation.
+   reading, an offline English gloss (ocr/cedict.py) and (best-effort,
+   online, opt-in) a Russian translation.
 """
 import os
 import re
@@ -18,7 +23,7 @@ import numpy as np
 import pytesseract
 from PIL import Image
 
-from . import cedict, radicals_db
+from . import cedict, hanzi_ocr, radicals_db
 
 HANZI_RE = re.compile(r"[\u4e00-\u9fff\u3400-\u4dbf]")
 _HAS_LETTER_RE = re.compile(r"[^\W\d_]", re.UNICODE)
@@ -63,10 +68,6 @@ def _tessdata_dir_config():
 _configure_tesseract()
 
 
-class TesseractUnavailable(RuntimeError):
-    pass
-
-
 def preprocess(image_bytes):
     """Bytes -> PIL.Image cropped to the ink bounding box, upscaled and
     re-binarized onto a padded white square canvas."""
@@ -107,13 +108,17 @@ def preprocess(image_bytes):
     return Image.fromarray(canvas)
 
 
-def ocr_candidates(pil_img):
+def tesseract_candidates(pil_img):
     """Run Tesseract in a few single-glyph page segmentation modes, return
     an ordered list of unique hanzi candidates (best guess first).
 
     Each page-segmentation mode can disagree on what the glyph is; instead
     of trusting whichever mode happens to run first, every candidate is
-    ranked by the highest OCR confidence it received across all modes."""
+    ranked by the highest OCR confidence it received across all modes.
+
+    Returns [] if the Tesseract binary isn't installed/configured -
+    Tesseract is a secondary source of alternative guesses (see
+    ocr_candidates below), not required for recognition to work at all."""
     best_conf = {}
     order = []
     tessdata_dir = _tessdata_dir_config()
@@ -123,8 +128,6 @@ def ocr_candidates(pil_img):
             data = pytesseract.image_to_data(
                 pil_img, lang="chi_sim", config=config, output_type=pytesseract.Output.DICT
             )
-        except pytesseract.TesseractNotFoundError as exc:
-            raise TesseractUnavailable(str(exc)) from exc
         except Exception:
             continue
         for text, conf in zip(data.get("text", []), data.get("conf", [])):
@@ -141,6 +144,24 @@ def ocr_candidates(pil_img):
                 elif conf > best_conf[ch]:
                     best_conf[ch] = conf
     order.sort(key=lambda ch: best_conf[ch], reverse=True)
+    return order
+
+
+def ocr_candidates(pil_img):
+    """Merge both OCR sources into one ranked list, best guess first.
+
+    ocr/hanzi_ocr.py's single-character ONNX model is primary - testing
+    showed it's dramatically more reliable than Tesseract for this app's
+    actual input (one pre-cropped glyph, not a text line). Tesseract's
+    guesses (tesseract_candidates) are appended as extra alternatives for
+    the "не то распозналось?" UI, for whatever it disagrees on."""
+    primary = hanzi_ocr.recognize_candidates(pil_img)  # [(char, confidence), ...]
+    primary_sorted = (ch for ch, _ in sorted(primary, key=lambda item: item[1], reverse=True))
+
+    order = list(dict.fromkeys(primary_sorted))
+    for ch in tesseract_candidates(pil_img):
+        if ch not in order:
+            order.append(ch)
     return order
 
 
@@ -254,8 +275,9 @@ def recognize(image_bytes, use_online_translate=False):
     """Full pipeline: preprocess -> OCR -> resolve candidates.
 
     Returns {"candidates": [...resolved entries...], "raw": [hanzi,...]}
-    with the best guess first. Raises TesseractUnavailable if the Tesseract
-    binary isn't installed/configured.
+    with the best guess first. Never raises for a missing/broken OCR
+    backend - if every source comes up empty, "raw"/"candidates" are just
+    empty lists (the UI already has a dedicated "not recognized" state).
     """
     pil_img = preprocess(image_bytes)
     raw = ocr_candidates(pil_img)

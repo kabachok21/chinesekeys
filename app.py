@@ -35,13 +35,6 @@ def recognize_view():
 
     try:
         result = rec.recognize(image_bytes, use_online_translate=online_translate)
-    except rec.TesseractUnavailable:
-        flash(
-            "Tesseract OCR не установлен или не найден. Установи Tesseract "
-            "(с языковым пакетом chi_sim) и укажи путь через переменную "
-            "окружения TESSERACT_CMD — см. README."
-        )
-        return redirect(url_for("index"))
     except ValueError as exc:
         flash(str(exc))
         return redirect(url_for("index"))

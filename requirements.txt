@@ -1,7 +1,18 @@
 Flask>=3.0
 pytesseract>=0.3.10
 Pillow>=10.0
-opencv-python-headless>=4.9
+# numpy/opencv pinned together: onnxruntime==1.18.1 below is compiled
+# against the numpy 1.x C-API and segfaults on import under numpy 2.x;
+# opencv-python-headless>=4.10 requires numpy>=2, so it's capped too.
+numpy<2
+opencv-python-headless>=4.9,<4.10
 pypinyin>=0.51
 deep-translator>=1.11
 waitress>=3.0
+# Single-character OCR (primary recognizer - see ocr/hanzi_ocr.py).
+# onnxruntime pinned to 1.18.1: newer 1.24-1.30 releases were seen
+# crashing (access violation) on import on a Windows dev machine even
+# though the CPU/VC++ redist were fine; 1.18.1 is a mature, widely-used
+# release with no such issue observed. Re-test before bumping.
+rapidocr==3.9.2
+onnxruntime==1.18.1
