@@ -307,3 +307,8 @@ h1 { font-size: 1.5rem; margin-bottom: 6px; }
 }
 .crop-suggest:hover, .crop-suggest:focus-visible { background: rgba(30, 136, 229, 0.38); }
 .crop-actions { display: flex; gap: 0.6rem; }
+
+/* Touch-friendly hit areas (nav links and the back link were ~21px tall). */
+.topbar nav a, .back-link a { display: inline-block; padding: 12px 6px; }
+.topbar nav a { margin-left: 6px; }
+.crop-handle::after { content: ""; position: absolute; inset: -10px; }

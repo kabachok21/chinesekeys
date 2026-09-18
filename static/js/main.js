@@ -117,6 +117,7 @@
         if (token !== loadToken) return;
         resetRect();
         ready = true;
+        cropper.scrollIntoView({ block: "center" });
         fetchSuggestions(blob, token);
       };
       img.src = URL.createObjectURL(blob);
