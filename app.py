@@ -4,6 +4,7 @@ import os
 from flask import Flask, abort, flash, redirect, render_template, request, url_for
 
 from ocr import radicals_db, recognize as rec
+from ocr.recognize import HANZI_RE
 
 app = Flask(__name__)
 # Only used to sign the flash() cookie (no auth/session data involved), but
@@ -50,6 +51,8 @@ def recognize_view():
 @app.route("/char/<char>")
 def char_view(char):
     char = char[:1]
+    if not HANZI_RE.match(char):
+        abort(404)
     use_online_translate = request.args.get("translate") == "1"
     c = rec.resolve_char(char, use_online_translate=use_online_translate)
     return render_template("char_view.html", c=c)

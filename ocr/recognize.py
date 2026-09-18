@@ -68,9 +68,78 @@ def _tessdata_dir_config():
 _configure_tesseract()
 
 
+def _flatten_illumination(gray):
+    """Divide out large-scale lighting variation (a shadow, backlight, or an
+    uneven-light gradient across the frame) before thresholding.
+
+    The Otsu threshold below is a single global cutoff; on a photo with an
+    uneven-light gradient, the darker side of the *background* can fall
+    below that cutoff and get classified as ink, turning a whole part of the
+    frame solid black and corrupting the crop/recognition (verified: a
+    top-to-bottom gray gradient background made a clearly-legible 水 get
+    misread as an unrelated character). Estimating the local background via
+    a large morphological closing (removes the comparatively thin, dark
+    strokes, keeps the slow-varying background) and dividing it out flattens
+    that gradient while leaving the strokes dark relative to their now
+    roughly-uniform surroundings.
+
+    The closing runs on a downscaled copy so its cost doesn't scale with the
+    megapixel count of a real phone photo - the background varies slowly by
+    construction, so a small kernel on the downscaled image is already
+    reliably larger than the (proportionally shrunk) stroke width.
+    """
+    h, w = gray.shape[:2]
+    scale = min(1.0, 500 / max(h, w, 1))
+    small = cv2.resize(gray, (max(1, int(w * scale)), max(1, int(h * scale))),
+                        interpolation=cv2.INTER_AREA) if scale < 1.0 else gray
+    kernel = np.ones((25, 25), np.uint8)
+    background = cv2.morphologyEx(small, cv2.MORPH_CLOSE, kernel)
+    if scale < 1.0:
+        background = cv2.resize(background, (w, h), interpolation=cv2.INTER_LINEAR)
+    background = np.maximum(background, 1)
+    return cv2.divide(gray, background, scale=255)
+
+
+def _looks_like_multiple_chars(thresh):
+    """Heuristic: ink spread much wider than the overall ink is tall usually
+    means the photo has more than one character (e.g. a whole word), not one
+    glyph with naturally wide/disconnected strokes.
+
+    This only ever adds an on-page hint (see recognize() /
+    "multiple_chars_suspected") - it never blocks recognition - precisely
+    because it's a heuristic that can't be made airtight: tested against
+    every official Kangxi radical with disconnected strokes (小, 门, 言, 心,
+    州, 灬 - the "four dots of fire" radical is the widest/flattest of the
+    214 and the one most easily confused with a short row of characters),
+    the width/height ratio for a real multi-word photo (~3.1 for 3
+    characters, ~7.4 for 7) only reliably separates from the single widest
+    legitimate radical (~3.1 for 灬) above roughly 4x - so the threshold
+    below is deliberately conservative (catches an obvious multi-character
+    photo, stays silent on anything a single radical could produce) rather
+    than tuned to catch every 2-3 character mistake, since a false positive
+    here would incorrectly cast doubt on a correct single-radical result."""
+    contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    boxes = [cv2.boundingRect(c) for c in contours if cv2.contourArea(c) > 0]
+    if len(boxes) < 2:
+        return False
+    max_area = max(bw * bh for (_, _, bw, bh) in boxes)
+    significant = [b for b in boxes if b[2] * b[3] >= 0.08 * max_area]
+    if len(significant) < 2:
+        return False
+    left = min(b[0] for b in significant)
+    right = max(b[0] + b[2] for b in significant)
+    top = min(b[1] for b in significant)
+    bottom = max(b[1] + b[3] for b in significant)
+    total_h = bottom - top
+    if total_h <= 0:
+        return False
+    return (right - left) / total_h > 4.0
+
+
 def preprocess(image_bytes):
-    """Bytes -> PIL.Image cropped to the ink bounding box, upscaled and
-    re-binarized onto a padded white square canvas."""
+    """Bytes -> (PIL.Image cropped to the ink bounding box, upscaled and
+    re-binarized onto a padded white square canvas; multiple_chars_suspected
+    flag - see _looks_like_multiple_chars)."""
     if not image_bytes:
         raise ValueError("Файл пустой или повреждён")
     arr = np.frombuffer(image_bytes, dtype=np.uint8)
@@ -82,8 +151,11 @@ def preprocess(image_bytes):
         raise ValueError("Не удалось прочитать изображение — попробуй другой файл")
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray = _flatten_illumination(gray)
     gray = cv2.GaussianBlur(gray, (5, 5), 0)
     _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+    multiple_chars_suspected = _looks_like_multiple_chars(thresh)
 
     coords = cv2.findNonZero(thresh)
     if coords is not None:
@@ -105,7 +177,7 @@ def preprocess(image_bytes):
     y0, x0 = (side - h) // 2, (side - w) // 2
     canvas[y0:y0 + h, x0:x0 + w] = bw
 
-    return Image.fromarray(canvas)
+    return Image.fromarray(canvas), multiple_chars_suspected
 
 
 def tesseract_candidates(pil_img):
@@ -147,6 +219,14 @@ def tesseract_candidates(pil_img):
     return order
 
 
+# Extra angles tried in ocr_candidates() below, on top of the as-uploaded
+# orientation, to cover common real-photo mistakes: a hand-held tilt (a
+# photo rotated 25 degrees was verified to already fool the model, so
+# +/-20 degrees is tried explicitly rather than relying on the model's own
+# tolerance) and holding the source upside down (a full 180-degree flip).
+_ROTATION_RETRY_ANGLES = (-20, 20, 180)
+
+
 def ocr_candidates(pil_img):
     """Merge both OCR sources into one ranked list, best guess first.
 
@@ -154,8 +234,17 @@ def ocr_candidates(pil_img):
     showed it's dramatically more reliable than Tesseract for this app's
     actual input (one pre-cropped glyph, not a text line). Tesseract's
     guesses (tesseract_candidates) are appended as extra alternatives for
-    the "не то распозналось?" UI, for whatever it disagrees on."""
-    primary = hanzi_ocr.recognize_candidates(pil_img)  # [(char, confidence), ...]
+    the "не то распозналось?" UI, for whatever it disagrees on.
+
+    The primary model is also run on a few rotated copies of the same glyph
+    (_ROTATION_RETRY_ANGLES) since it was found to misread a moderately
+    tilted or upside-down photo with high confidence and no other signal
+    that something was off; merging in whatever those extra passes find
+    only ever adds candidates, so a straight photo's result is unaffected."""
+    primary = list(hanzi_ocr.recognize_candidates(pil_img))  # [(char, confidence), ...]
+    for angle in _ROTATION_RETRY_ANGLES:
+        rotated = pil_img.rotate(angle, fillcolor=255, expand=True)
+        primary.extend(hanzi_ocr.recognize_candidates(rotated))
     primary_sorted = (ch for ch, _ in sorted(primary, key=lambda item: item[1], reverse=True))
 
     order = list(dict.fromkeys(primary_sorted))
@@ -274,12 +363,17 @@ def resolve_char(char, use_online_translate=False):
 def recognize(image_bytes, use_online_translate=False):
     """Full pipeline: preprocess -> OCR -> resolve candidates.
 
-    Returns {"candidates": [...resolved entries...], "raw": [hanzi,...]}
-    with the best guess first. Never raises for a missing/broken OCR
-    backend - if every source comes up empty, "raw"/"candidates" are just
-    empty lists (the UI already has a dedicated "not recognized" state).
+    Returns {"candidates": [...resolved entries...], "raw": [hanzi,...],
+    "multiple_chars_suspected": bool} with the best guess first. Never
+    raises for a missing/broken OCR backend - if every source comes up
+    empty, "raw"/"candidates" are just empty lists (the UI already has a
+    dedicated "not recognized" state).
     """
-    pil_img = preprocess(image_bytes)
+    pil_img, multiple_chars_suspected = preprocess(image_bytes)
     raw = ocr_candidates(pil_img)
     resolved = [resolve_char(ch, use_online_translate=use_online_translate) for ch in raw]
-    return {"raw": raw, "candidates": resolved}
+    return {
+        "raw": raw,
+        "candidates": resolved,
+        "multiple_chars_suspected": multiple_chars_suspected,
+    }
