@@ -5,12 +5,32 @@
 <p class="lead">Загрузи фото одного ключа (радикала) или иероглифа — приложение попробует его распознать
   и покажет картинку, транскрипцию (пиньинь) и перевод на русский.</p>
 
-<form method="post" action="{{ url_for('recognize_view') }}" enctype="multipart/form-data" class="upload-form">
+<form method="post" action="{{ url_for('recognize_view') }}" enctype="multipart/form-data" class="upload-form" id="uploadForm">
   <label class="file-drop" id="fileDrop">
-    <input type="file" name="photo" accept="image/*" capture="environment" required id="photoInput">
-    <span id="fileDropText">Нажми, чтобы сделать фото или выбрать файл — или вставь картинку сочетанием Ctrl+V</span>
-    <img id="preview" alt="предпросмотр" hidden>
+    <input type="file" name="photo" accept="image/*" required id="photoInput">
+    <span id="fileDropText">Выбрать фото из галереи или файлов — или вставь картинку сочетанием Ctrl+V</span>
   </label>
+
+  <div class="source-row">
+    <label class="btn-secondary source-btn">
+      <input type="file" accept="image/*" capture="environment" id="cameraInput" hidden>
+      Сделать фото
+    </label>
+  </div>
+
+  <div class="cropper" id="cropper" hidden>
+    <p class="hint">Потяни рамку, чтобы выделить один иероглиф. Если на фото их несколько — нажми на нужный.</p>
+    <div class="crop-stage" id="cropStage">
+      <img id="cropImg" alt="Фото для обрезки" draggable="false">
+      <div class="crop-box" id="cropBox">
+        <span class="crop-handle" data-h="nw"></span><span class="crop-handle" data-h="ne"></span>
+        <span class="crop-handle" data-h="sw"></span><span class="crop-handle" data-h="se"></span>
+      </div>
+    </div>
+    <div class="crop-actions">
+      <button type="button" class="btn-secondary" id="cropReset">Вся фотография</button>
+    </div>
+  </div>
 
   <label class="checkbox-row">
     <input type="checkbox" name="online_translate" value="1">

@@ -68,6 +68,11 @@ def _tessdata_dir_config():
 _configure_tesseract()
 
 
+# A 12MP phone photo carries no extra information for one glyph but makes
+# every step below several times slower.
+_MAX_INPUT_SIDE = 1600
+
+
 def _flatten_illumination(gray):
     """Divide out large-scale lighting variation (a shadow, backlight, or an
     uneven-light gradient across the frame) before thresholding.
@@ -136,6 +141,75 @@ def _looks_like_multiple_chars(thresh):
     return (right - left) / total_h > 4.0
 
 
+def find_char_boxes(image_bytes):
+    """Suggest where individual characters are in a photo that holds several.
+
+    Returns [{"x","y","w","h"}, ...] as fractions (0-1) of the image, or []
+    if the ink doesn't look like a row/column of 2+ characters. Only a
+    suggestion for the crop UI (the user picks/adjusts the box), so it is
+    deliberately simple: split the ink on blank columns (rows for vertical
+    text), then glue neighbouring pieces together until each is roughly
+    square - a character is ~square, but its radicals (亻+尔) are separated by
+    blank columns too."""
+    if not image_bytes:
+        return []
+    img = cv2.imdecode(np.frombuffer(image_bytes, dtype=np.uint8), cv2.IMREAD_GRAYSCALE)
+    if img is None:
+        return []
+    long_side = max(img.shape[:2])
+    if long_side > _MAX_INPUT_SIDE:
+        f = _MAX_INPUT_SIDE / long_side
+        img = cv2.resize(img, (int(img.shape[1] * f), int(img.shape[0] * f)), interpolation=cv2.INTER_AREA)
+    H, W = img.shape[:2]
+    gray = cv2.GaussianBlur(_flatten_illumination(img), (5, 5), 0)
+    _, ink = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    coords = cv2.findNonZero(ink)
+    if coords is None:
+        return []
+    x, y, w, h = cv2.boundingRect(coords)
+    if max(w, h) < 1.5 * min(w, h):
+        return []
+    ink = ink[y:y + h, x:x + w] > 0
+    horizontal = w >= h
+    cell = min(w, h)
+    filled = ink.any(axis=0 if horizontal else 1)
+
+    runs, start = [], None
+    for i, on in enumerate(filled):
+        if on and start is None:
+            start = i
+        elif not on and start is not None:
+            runs.append([start, i])
+            start = None
+    if start is not None:
+        runs.append([start, len(filled)])
+
+    spans = []
+    for s0, e0 in runs:
+        if spans and spans[-1][1] - spans[-1][0] < 0.7 * cell:
+            spans[-1][1] = e0
+        else:
+            spans.append([s0, e0])
+    if len(spans) > 1 and spans[-1][1] - spans[-1][0] < 0.35 * cell:
+        spans[-2][1] = spans[-1][1]
+        spans.pop()
+    if len(spans) < 2:
+        return []
+
+    boxes = []
+    for s0, e0 in spans:
+        part = ink[:, s0:e0] if horizontal else ink[s0:e0, :]
+        other = part.any(axis=1 if horizontal else 0)
+        idx = np.flatnonzero(other)
+        o0, o1 = int(idx[0]), int(idx[-1]) + 1
+        bx, by, bw, bh = (x + s0, y + o0, e0 - s0, o1 - o0) if horizontal else (x + o0, y + s0, o1 - o0, e0 - s0)
+        pad = int(max(bw, bh) * 0.1) + 2
+        bx0, by0 = max(bx - pad, 0), max(by - pad, 0)
+        bx1, by1 = min(bx + bw + pad, W), min(by + bh + pad, H)
+        boxes.append({"x": bx0 / W, "y": by0 / H, "w": (bx1 - bx0) / W, "h": (by1 - by0) / H})
+    return boxes
+
+
 def preprocess(image_bytes):
     """Bytes -> (PIL.Image cropped to the ink bounding box, upscaled and
     re-binarized onto a padded white square canvas; multiple_chars_suspected
@@ -151,6 +225,10 @@ def preprocess(image_bytes):
         raise ValueError("Не удалось прочитать изображение — попробуй другой файл")
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    long_side = max(gray.shape[:2])
+    if long_side > _MAX_INPUT_SIDE:
+        f = _MAX_INPUT_SIDE / long_side
+        gray = cv2.resize(gray, (int(gray.shape[1] * f), int(gray.shape[0] * f)), interpolation=cv2.INTER_AREA)
     gray = _flatten_illumination(gray)
     gray = cv2.GaussianBlur(gray, (5, 5), 0)
     _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
@@ -194,7 +272,7 @@ def tesseract_candidates(pil_img):
     best_conf = {}
     order = []
     tessdata_dir = _tessdata_dir_config()
-    for psm in (10, 7, 6):
+    for psm in (10, 7):
         config = f"--psm {psm} {tessdata_dir}".strip()
         try:
             data = pytesseract.image_to_data(
@@ -219,38 +297,42 @@ def tesseract_candidates(pil_img):
     return order
 
 
-# Extra angles tried in ocr_candidates() below, on top of the as-uploaded
-# orientation, to cover common real-photo mistakes: a hand-held tilt (a
-# photo rotated 25 degrees was verified to already fool the model, so
-# +/-20 degrees is tried explicitly rather than relying on the model's own
-# tolerance) and holding the source upside down (a full 180-degree flip).
+# Extra angles tried in ocr_candidates() below to cover common real-photo
+# mistakes: a hand-held tilt (25 degrees was verified to fool the model, so
+# +/-20 is tried explicitly) and holding the source upside down (180).
 _ROTATION_RETRY_ANGLES = (-20, 20, 180)
+
+# The primary model scores ~0.94-1.0 on a clean, upright glyph and drops
+# sharply (0.26-0.7) on tilted/upside-down/ambiguous input. Only in that
+# low-confidence case are the (comparatively slow) rotation retries and the
+# Tesseract subprocess worth running - on a confident result they were ~90%
+# of the request time and changed nothing.
+_CONFIDENT_SCORE = 0.9
 
 
 def ocr_candidates(pil_img):
-    """Merge both OCR sources into one ranked list, best guess first.
+    """Merge OCR sources into one ranked list, best guess first.
 
     ocr/hanzi_ocr.py's single-character ONNX model is primary - testing
     showed it's dramatically more reliable than Tesseract for this app's
-    actual input (one pre-cropped glyph, not a text line). Tesseract's
-    guesses (tesseract_candidates) are appended as extra alternatives for
-    the "не то распозналось?" UI, for whatever it disagrees on.
-
-    The primary model is also run on a few rotated copies of the same glyph
-    (_ROTATION_RETRY_ANGLES) since it was found to misread a moderately
-    tilted or upside-down photo with high confidence and no other signal
-    that something was off; merging in whatever those extra passes find
-    only ever adds candidates, so a straight photo's result is unaffected."""
+    actual input (one pre-cropped glyph, not a text line). When it is not
+    confident (see _CONFIDENT_SCORE) it is also run on rotated copies of the
+    glyph (a tilted/upside-down photo gets misread with no other warning
+    sign) and Tesseract's guesses are appended as extra alternatives for the
+    "не то распозналось?" UI. Merging only ever adds candidates."""
     primary = list(hanzi_ocr.recognize_candidates(pil_img))  # [(char, confidence), ...]
-    for angle in _ROTATION_RETRY_ANGLES:
-        rotated = pil_img.rotate(angle, fillcolor=255, expand=True)
-        primary.extend(hanzi_ocr.recognize_candidates(rotated))
+    confident = bool(primary) and max(score for _, score in primary) >= _CONFIDENT_SCORE
+    if not confident:
+        for angle in _ROTATION_RETRY_ANGLES:
+            rotated = pil_img.rotate(angle, fillcolor=255, expand=True)
+            primary.extend(hanzi_ocr.recognize_candidates(rotated))
     primary_sorted = (ch for ch, _ in sorted(primary, key=lambda item: item[1], reverse=True))
 
     order = list(dict.fromkeys(primary_sorted))
-    for ch in tesseract_candidates(pil_img):
-        if ch not in order:
-            order.append(ch)
+    if not confident:
+        for ch in tesseract_candidates(pil_img):
+            if ch not in order:
+                order.append(ch)
     return order
 
 

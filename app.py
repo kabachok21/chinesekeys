@@ -1,9 +1,10 @@
 import base64
 import os
+import threading
 
-from flask import Flask, abort, flash, redirect, render_template, request, url_for
+from flask import Flask, abort, flash, jsonify, redirect, render_template, request, url_for
 
-from ocr import radicals_db, recognize as rec
+from ocr import hanzi_ocr, radicals_db, recognize as rec
 from ocr.recognize import HANZI_RE
 
 app = Flask(__name__)
@@ -14,6 +15,12 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY") or os.urandom(32)
 
 MAX_UPLOAD_BYTES = 8 * 1024 * 1024
 app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
+
+
+# Loading the ONNX model takes ~0.7s locally (much more on a small free-tier
+# instance); do it in the background at startup so the first user's request
+# doesn't pay for it.
+threading.Thread(target=hanzi_ocr._get_engine, daemon=True).start()
 
 
 @app.route("/")
@@ -46,6 +53,13 @@ def recognize_view():
         photo_data_uri=photo_data_uri,
         online_translate=online_translate,
     )
+
+
+@app.route("/segment", methods=["POST"])
+def segment_view():
+    photo = request.files.get("photo")
+    boxes = rec.find_char_boxes(photo.read()) if photo else []
+    return jsonify(boxes=boxes)
 
 
 @app.route("/char/<char>")
